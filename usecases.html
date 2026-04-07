@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Switzer:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_shared.css"><title>Use Cases — Implexus Data Technologies</title></head>
+<body>
+<nav id="nav">
+  <a class="nav-logo" href="index.html"><div class="logo-mark"><span></span><span></span><span></span><span></span></div><span class="logo-text">Implexus</span></a>
+  <ul class="nav-links"><li><a href="index.html">Overview</a></li><li><a href="technology.html">Technology</a></li><li><a href="usecases.html" class="active">Use Cases</a></li><li><a href="approach.html">Approach</a></li><li><a href="about.html">About</a></li></ul>
+  <div class="nav-right"><a class="nav-cta-ghost" href="contact.html">Contact</a><a class="nav-cta" href="investor.html">Investor Overview</a></div>
+  <button class="nav-hamburger" id="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></button>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html" onclick="closeNav()">Overview</a>
+  <a href="technology.html" onclick="closeNav()">Technology</a>
+  <a href="usecases.html" onclick="closeNav()">Use Cases</a>
+  <a href="approach.html" onclick="closeNav()">Approach</a>
+  <a href="about.html" onclick="closeNav()">About</a>
+  <a href="faq.html" onclick="closeNav()">FAQ</a>
+  <a href="careers.html" onclick="closeNav()">Careers</a>
+  <div class="nav-mobile-ctas">
+    <a href="investor.html" class="btn-primary-dark" style="text-align:center;justify-content:center">Investor Overview</a>
+    <a href="contact.html" class="btn-ghost-dark" style="text-align:center;justify-content:center">Contact</a>
+  </div>
+</div>
+<script>function toggleNav(){document.getElementById("nav-mobile").classList.toggle("open")}function closeNav(){document.getElementById("nav-mobile").classList.remove("open")}</script>
+<div class="int-banner"><div class="int-banner-grid"></div><div class="int-banner-orb"></div><div class="int-banner-inner"><div class="int-banner-badge">Industry Applications</div><div class="int-banner-title">Four environments. <em>One framework.</em></div><p class="int-banner-sub">Every use case below describes the real infrastructure problem, how Q2 addresses it, and what the deployment context looks like. All applications are conditional on the ongoing validation programme.</p></div></div>
+<div class="int-outer"><div class="int-layout"><aside class="int-sidebar"><div class="sb-page-label">Applications</div><div class="sb-page-title">Use Cases</div><ul class="sb-nav"><li><a class="sb-link active" href="#uc-datacentres"><span class="sb-diamond"></span>Data centres</a></li><li><a class="sb-link" href="#uc-transmission"><span class="sb-diamond"></span>Secure transmission</a></li><li><a class="sb-link" href="#uc-ai"><span class="sb-diamond"></span>AI &amp; HPC</a></li><li><a class="sb-link" href="#uc-regulated"><span class="sb-diamond"></span>Regulated environments</a></li></ul><div class="sb-divider"></div><a href="contact.html" class="btn-primary-dark sb-cta">Discuss Your Environment</a><p class='sb-meta'>All engagements begin under mutual NDA.</p></aside><main class="int-content">
+  <section class="int-section" id="uc-datacentres">
+    <div class="uc-num">Use case 01</div>
+    <div class="uc-big-title">Data Centres</div>
+    <p class="uc-overview">The world's data centres are under pressure from every direction — more data, less space, higher energy costs, and tightening sustainability requirements. The biggest players are building bigger. Implexus offers a different answer.</p>
+    <div class="uc-two-col">
+      <div><div class="uc-col-label">The problem</div><div class="uc-col-body">Global data creation is accelerating faster than physical storage can expand. Building more data centres costs billions, takes years, and consumes land, power, and water at scale. Even the largest operators face grid capacity and land availability constraints.</div></div>
+      <div><div class="uc-col-label">How Q2 addresses it</div><div class="uc-col-body">If structured data can be stored in a smaller form without losing anything, the same physical infrastructure holds more — and uses proportionally less energy and cooling. At data centre scale, even a modest improvement in storage density has measurable impact on operating costs and capital requirements.</div></div>
+    </div>
+    <div class="uc-posture"><p><strong>Deployment posture:</strong> Partner-led validation. Enterprise environments only. Conditional on independent replication at production scale.</p></div>
+    <div class="mt24"><a href="contact.html" class="btn-ghost-light">Discuss this environment →</a></div>
+  </section>
+  <section class="int-section" id="uc-transmission">
+    <div class="uc-num">Use case 02</div>
+    <div class="uc-big-title">Secure Transmission</div>
+    <p class="uc-overview">When data is encrypted — as it must be in government, defence, and finance — traditional tools for reducing its size stop working entirely. Q2 addresses the problem at a different level.</p>
+    <div class="uc-two-col">
+      <div><div class="uc-col-label">The problem</div><div class="uc-col-body">Encryption works by making data look like random noise — by design. This means conventional compression has no patterns to exploit. Organisations carrying large volumes of encrypted data have no way to reduce its size with existing tools.</div></div>
+      <div><div class="uc-col-label">How Q2 addresses it</div><div class="uc-col-body">Q2 operates at a different mathematical layer than compression. It does not need to find patterns. Its relevance to encrypted data pipelines and the pre-encryption structured data layer is under active investigation as part of the current evaluation programme.</div></div>
+    </div>
+    <div class="uc-posture"><p><strong>Deployment posture:</strong> Regulated environments only. NDA required for detailed engagement. Partner-led.</p></div>
+    <div class="mt24"><a href="contact.html" class="btn-ghost-light">Discuss this environment →</a></div>
+  </section>
+  <section class="int-section" id="uc-ai">
+    <div class="uc-num">Use case 03</div>
+    <div class="uc-big-title">AI &amp; HPC</div>
+    <p class="uc-overview">AI is generating and requiring the movement of data at a scale that infrastructure was not built for. Training large models, deploying them to edge devices, and maintaining the pipelines that feed them are all creating new storage and transmission burdens.</p>
+    <div class="uc-two-col">
+      <div><div class="uc-col-label">The problem</div><div class="uc-col-body">Moving large AI models to edge devices means transmitting tens of gigabytes over constrained links. Existing approaches either sacrifice accuracy or accept the cost of large transfers. Neither is ideal as models continue to grow.</div></div>
+      <div><div class="uc-col-label">How Q2 addresses it</div><div class="uc-col-body">The question being investigated: can AI model weight files be transformed into a smaller form for transmission and restored exactly at the destination? Results for this data category are preliminary. They are not sufficient for conclusions. We are being transparent about the state of the work.</div></div>
+    </div>
+    <div class="uc-posture"><p><strong>Deployment posture:</strong> Active research category. Do not extrapolate from current lab results. Partner discussions for joint evaluation design welcomed.</p></div>
+    <div class="mt24"><a href="contact.html" class="btn-ghost-light">Discuss this environment →</a></div>
+  </section>
+  <section class="int-section" id="uc-regulated">
+    <div class="uc-num">Use case 04</div>
+    <div class="uc-big-title">Regulated Environments</div>
+    <p class="uc-overview">Finance, healthcare, and government organisations operate under compliance frameworks that add a layer of constraint to every infrastructure decision. The technology they use must be auditable, governance-aware, and deployed through documented, controlled processes.</p>
+    <div class="uc-two-col">
+      <div><div class="uc-col-label">The problem</div><div class="uc-col-body">Data growth in regulated sectors carries compliance overhead. Every additional terabyte of storage, every additional data transfer, adds to the audit surface. Infrastructure decisions in these environments require documentation, approval processes, and validated performance under realistic conditions.</div></div>
+      <div><div class="uc-col-label">How Q2 addresses it</div><div class="uc-col-body">The Q2 deployment model is designed around governance from the start. Cryptographic verification at the output layer creates an auditable trail. The partner-led approach means no uncontrolled deployment into sensitive systems — ever.</div></div>
+    </div>
+    <div class="uc-posture"><p><strong>Deployment posture:</strong> Governance-first. All engagements begin under NDA. Contact through the Partnership or Technical Diligence paths.</p></div>
+    <div class="mt24"><a href="contact.html" class="btn-ghost-light">Discuss this environment →</a></div>
+  </section>
+</main></div></div>
+<footer class="site-footer"><div class="site-footer-inner"><div class="site-footer-top"><div><div class="site-footer-logo"><div class="logo-mark"><span></span><span></span><span></span><span></span></div><span class="logo-text">Implexus</span></div><p class="site-footer-tagline">In Everything &amp; Everywhere</p></div><div class="site-footer-col"><h5>Navigation</h5><a href="technology.html">Technology</a><a href="approach.html">Approach</a><a href="usecases.html">Use Cases</a><a href="about.html">About</a></div><div class="site-footer-col"><h5>Company</h5><a href="about.html">About Implexus</a><a href="investor.html">Investor Overview</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a></div><div class="site-footer-col"><h5>Resources</h5><a href="contact.html">Technical Overview</a><a href="faq.html">FAQ</a><a href="investor.html">Programme Status</a></div></div><div class="site-footer-bottom"><p class="site-footer-legal">© 2026 Implexus Data Technologies Inc. — Toronto, Canada. All performance claims are internal laboratory results subject to independent validation.</p><div class="site-footer-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div></div></footer>
+</body>
+</html>

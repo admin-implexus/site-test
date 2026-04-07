@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Switzer:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_shared.css">
+<title>Implexus Data Technologies — Q2 Data Engine</title></head>
+<body>
+<nav id="nav">
+  <a class="nav-logo" href="index.html">
+    <div class="logo-mark"><span></span><span></span><span></span><span></span></div>
+    <span class="logo-text">Implexus</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Overview</a></li>
+    <li><a href="technology.html">Technology</a></li>
+    <li><a href="usecases.html">Use Cases</a></li>
+    <li><a href="approach.html">Approach</a></li>
+    <li><a href="about.html">About</a></li>
+    
+  </ul>
+  <div class="nav-right">
+    <a class="nav-cta-ghost" href="contact.html">Contact</a>
+    <a class="nav-cta" href="investor.html">Investor Overview</a>
+  </div>
+  <button class="nav-hamburger" id="hamburger" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html" onclick="closeNav()">Overview</a>
+  <a href="technology.html" onclick="closeNav()">Technology</a>
+  <a href="usecases.html" onclick="closeNav()">Use Cases</a>
+  <a href="approach.html" onclick="closeNav()">Approach</a>
+  <a href="about.html" onclick="closeNav()">About</a>
+  <a href="faq.html" onclick="closeNav()">FAQ</a>
+  <a href="careers.html" onclick="closeNav()">Careers</a>
+  <div class="nav-mobile-ctas">
+    <a href="investor.html" class="btn-primary-dark" style="text-align:center;justify-content:center">Investor Overview</a>
+    <a href="contact.html" class="btn-ghost-dark" style="text-align:center;justify-content:center">Contact</a>
+  </div>
+</div>
+<script>
+function toggleNav(){document.getElementById("nav-mobile").classList.toggle("open")}
+function closeNav(){document.getElementById("nav-mobile").classList.remove("open")}
+</script>
+
+<section id="hero" style="position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--bg)">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 55% 40%,rgba(108,63,162,0.22) 0%,transparent 65%),radial-gradient(ellipse 40% 50% at 15% 80%,rgba(108,63,162,0.10) 0%,transparent 60%),linear-gradient(to bottom,rgba(8,8,11,0.55) 0%,transparent 25%,transparent 65%,rgba(8,8,11,0.97) 100%)"></div>
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(108,63,162,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(108,63,162,0.03) 1px,transparent 1px);background-size:56px 56px;pointer-events:none"></div>
+  <div style="position:relative;z-index:2;padding:0 64px 96px;max-width:1280px">
+    <div style="display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:10px;font-weight:400;letter-spacing:0.14em;text-transform:uppercase;color:var(--purple-xhi);margin-bottom:32px">
+      <span style="width:5px;height:5px;border-radius:50%;background:var(--purple-hi);box-shadow:0 0 8px 2px rgba(155,112,204,0.8);display:block"></span>Q2 Data Engine — Validation Phase
+    </div>
+    <h1 style="font-family:var(--serif);font-size:clamp(52px,6.5vw,96px);font-weight:400;line-height:1.05;letter-spacing:-0.01em;color:#fff;margin-bottom:28px;max-width:800px">Digital infrastructure<br>is being <span style="color:var(--purple-xhi)">redefined.</span></h1>
+    <p style="font-size:17px;font-weight:300;color:var(--text-mid);line-height:1.72;max-width:480px;margin-bottom:48px">Implexus develops infrastructure-level data transformation systems designed for integration within enterprise and government computing environments.</p>
+    <div style="display:flex;align-items:center;gap:14px;flex-wrap:wrap">
+      <a href="technology.html" class="btn-primary-dark">Explore the Technology</a>
+      <a href="contact.html" class="btn-ghost-dark">Request Demo</a>
+    </div>
+  </div>
+</section>
+
+<div style="overflow:hidden;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--bg-1);padding:14px 0;display:flex;align-items:center">
+  <div style="font-family:var(--mono);font-size:9px;font-weight:400;letter-spacing:0.16em;text-transform:uppercase;color:var(--purple-hi);padding:0 32px;flex-shrink:0;white-space:nowrap">Q2 Data Engine</div>
+  <div style="display:flex;gap:56px;white-space:nowrap;overflow:hidden">
+    <span style="font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-mid)"><strong style="color:var(--text);font-weight:500">Infrastructure-Level</strong> Data Transformation</span>
+    <span style="font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-mid)"><strong style="color:var(--text);font-weight:500">Encryption-Ready</strong> Operation</span>
+    <span style="font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-mid)"><strong style="color:var(--text);font-weight:500">Exact Recovery</strong> Validated</span>
+    <span style="font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-mid)"><strong style="color:var(--text);font-weight:500">50×</strong> Laboratory Results</span>
+    <span style="font-family:var(--mono);font-size:11px;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:var(--text-mid)"><strong style="color:var(--text);font-weight:500">Below</strong> the Application Stack</span>
+  </div>
+</div>
+
+<section class="section" style="background:#fff;border-bottom:1px solid rgba(0,0,0,0.07)">
+  <div class="section-inner">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start">
+      <div>
+        <div class="eyebrow eyebrow-light">About Implexus</div>
+        <h2 class="heading-xl" style="color:#111;margin-bottom:24px;max-width:520px">Implexus addresses the structural limits of modern data infrastructure.</h2>
+        <p class="body-copy body-copy-light mt24">Implexus develops data transformation systems that operate beneath the application layer — restructuring how data is represented, stored, and transmitted at the mathematical level.</p>
+        <p class="body-copy body-copy-light mt16">Based in Toronto. Enterprise and government focus. Partner-led deployment. Implexus is building what the industry has treated as impossible: a data transformation system that works where conventional approaches structurally cannot.</p>
+      </div>
+      <div>
+        <div style="display:flex;flex-direction:column">
+          <div style="padding:40px 0;border-top:1px solid rgba(0,0,0,0.08);display:grid;grid-template-columns:64px 1fr;gap:28px;align-items:start">
+            <div style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.12em;color:var(--purple-hi);padding-top:4px">01</div>
+            <div>
+              <div style="font-family:var(--mono);font-size:9px;font-weight:400;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-dim);margin-bottom:12px">The problem</div>
+              <div style="font-family:var(--serif);font-size:22px;font-weight:400;color:#111;line-height:1.25;margin-bottom:12px">Data is growing faster than it can be stored or moved.</div>
+              <div style="font-size:13px;font-weight:300;color:#777;line-height:1.72">Storage capacity, network throughput, and processing pipelines are all failing to keep pace with data growth rates. The gap is structural — not a temporary shortfall.</div>
+            </div>
+          </div>
+          <div style="padding:40px 0;border-top:1px solid rgba(0,0,0,0.08);display:grid;grid-template-columns:64px 1fr;gap:28px;align-items:start">
+            <div style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.12em;color:var(--purple-hi);padding-top:4px">02</div>
+            <div>
+              <div style="font-family:var(--mono);font-size:9px;font-weight:400;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-dim);margin-bottom:12px">The constraint</div>
+              <div style="font-family:var(--serif);font-size:22px;font-weight:400;color:#111;line-height:1.25;margin-bottom:12px">Every tool built to address this was designed for a different era.</div>
+              <div style="font-size:13px;font-weight:300;color:#777;line-height:1.72">Compression, deduplication, tiered storage — these were built for workloads that no longer represent the dominant data environment. They operate at the application layer, above the problem.</div>
+            </div>
+          </div>
+          <div style="padding:40px 0;border-top:1px solid rgba(0,0,0,0.08);border-bottom:1px solid rgba(0,0,0,0.08);display:grid;grid-template-columns:64px 1fr;gap:28px;align-items:start">
+            <div style="font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.12em;color:var(--purple-hi);padding-top:4px">03</div>
+            <div>
+              <div style="font-family:var(--mono);font-size:9px;font-weight:400;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-dim);margin-bottom:12px">The requirement</div>
+              <div style="font-family:var(--serif);font-size:22px;font-weight:400;color:#111;line-height:1.25;margin-bottom:12px">The solution must operate beyond system-level limits.</div>
+              <div style="font-size:13px;font-weight:300;color:#777;line-height:1.72">Addressing the problem requires operating below the application layer — at the mathematical representation of the data itself. That is precisely where Q2 operates.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="background:linear-gradient(135deg,#1A0840 0%,#2A1060 100%);padding:96px 64px;position:relative;overflow:hidden">
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:900px;height:400px;background:radial-gradient(ellipse,rgba(108,63,162,0.14) 0%,transparent 65%);pointer-events:none"></div>
+  <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);position:relative">
+    <div style="padding:0 64px;border-right:1px solid var(--border);text-align:center">
+      <div style="font-family:var(--serif);font-size:clamp(72px,8vw,108px);font-weight:400;color:var(--purple-hi);line-height:1;text-shadow:0 0 60px rgba(155,112,204,0.5);margin-bottom:16px">50×</div>
+      <div style="font-size:13px;font-weight:400;color:var(--text);line-height:1.5;margin-bottom:8px">Size reduction in laboratory conditions</div>
+      <div style="font-family:var(--mono);font-size:11px;font-weight:300;color:var(--text-dim);line-height:1.6">Lab results only. Independent validation in preparation.</div>
+    </div>
+    <div style="padding:0 64px;border-right:1px solid var(--border);text-align:center">
+      <div style="font-family:var(--serif);font-size:clamp(72px,8vw,108px);font-weight:400;color:var(--purple-hi);line-height:1;text-shadow:0 0 60px rgba(155,112,204,0.5);margin-bottom:16px">99.9%</div>
+      <div style="font-size:13px;font-weight:400;color:var(--text);line-height:1.5;margin-bottom:8px">Lossless recovery rate</div>
+      <div style="font-family:var(--mono);font-size:11px;font-weight:300;color:var(--text-dim);line-height:1.6">Verified across all test cases to date. Exact recovery validated.</div>
+    </div>
+    <div style="padding:0 64px;text-align:center">
+      <div style="font-family:var(--serif);font-size:clamp(72px,8vw,108px);font-weight:400;color:var(--purple-hi);line-height:1;text-shadow:0 0 60px rgba(155,112,204,0.5);margin-bottom:16px">0</div>
+      <div style="font-size:13px;font-weight:400;color:var(--text);line-height:1.5;margin-bottom:8px">Changes required to existing workflows</div>
+      <div style="font-family:var(--mono);font-size:11px;font-weight:300;color:var(--text-dim);line-height:1.6">Infrastructure-level integration. No application-layer changes needed.</div>
+    </div>
+  </div>
+</div>
+
+<section class="section" style="background:#fff">
+  <div class="section-inner">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:72px">
+      <div><div class="eyebrow eyebrow-light">The Q2 Data Engine</div><h2 class="heading-xl" style="color:#111">A new approach to data transformation.</h2></div>
+      <div><p class="body-copy body-copy-light">Q2 restructures how data is mathematically represented — producing a smaller, fully recoverable binary output that works across file types, in any encryption state. It is not compression. It operates at a different layer entirely.</p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(0,0,0,0.07);border-radius:10px;overflow:hidden">
+      <div style="background:#fff;padding:40px 36px;position:relative"><div style="font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.12em;color:rgba(108,63,162,0.6);margin-bottom:20px">01</div><div style="font-size:16px;font-weight:500;color:#111;margin-bottom:10px;line-height:1.3">Fully Reversible</div><div style="font-size:13px;font-weight:300;color:#666;line-height:1.7">The output is not an approximation. Every bit of the original data is exactly recoverable. Exact recovery is validated on all test cases completed to date.</div></div>
+      <div style="background:#fff;padding:40px 36px;position:relative"><div style="font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.12em;color:rgba(108,63,162,0.6);margin-bottom:20px">02</div><div style="font-size:16px;font-weight:500;color:#111;margin-bottom:10px;line-height:1.3">Works Beyond Compression</div><div style="font-size:13px;font-weight:300;color:#666;line-height:1.7">Q2 does not find redundancy or eliminate entropy. It operates on a different mathematical principle — applicable where conventional compression has already reached its limit.</div></div>
+      <div style="background:#fff;padding:40px 36px;position:relative"><div style="font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.12em;color:rgba(108,63,162,0.6);margin-bottom:20px">03</div><div style="font-size:16px;font-weight:500;color:#111;margin-bottom:10px;line-height:1.3">Output-Level Verification</div><div style="font-size:13px;font-weight:300;color:#666;line-height:1.7">Integrity is verifiable at the output stage, not inferred. Every transformation produces an output that can be independently confirmed before decoding.</div></div>
+      <div style="background:#fff;padding:40px 36px;position:relative"><div style="font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.12em;color:rgba(108,63,162,0.6);margin-bottom:20px">04</div><div style="font-size:16px;font-weight:500;color:#111;margin-bottom:10px;line-height:1.3">Data-Agnostic</div><div style="font-size:13px;font-weight:300;color:#666;line-height:1.7">The system imposes no requirements on the data type, format, or structure. Files of any kind enter the pipeline without pre-processing or classification.</div></div>
+      <div style="background:#fff;padding:40px 36px;position:relative"><div style="font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.12em;color:rgba(108,63,162,0.6);margin-bottom:20px">05</div><div style="font-size:16px;font-weight:500;color:#111;margin-bottom:10px;line-height:1.3">High Transformation Efficiency</div><div style="font-size:13px;font-weight:300;color:#666;line-height:1.7">Results in laboratory testing show size reductions of up to 50×. These are lab figures only. Real-world performance is subject to ongoing validation.</div></div>
+      <div style="background:#fff;padding:40px 36px;position:relative"><div style="font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.12em;color:rgba(108,63,162,0.6);margin-bottom:20px">06</div><div style="font-size:16px;font-weight:500;color:#111;margin-bottom:10px;line-height:1.3">Infrastructure-Integrated</div><div style="font-size:13px;font-weight:300;color:#666;line-height:1.7">Q2 is designed to operate at the infrastructure layer — below the application stack. It does not require changes to existing software, workflows, or encryption posture.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#1E0845;position:relative;overflow:hidden">
+  <div style="position:absolute;right:-10%;top:20%;width:700px;height:700px;background:radial-gradient(circle,rgba(108,63,162,0.12) 0%,transparent 65%);pointer-events:none"></div>
+  <div class="section-inner">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-bottom:72px">
+      <div><div class="eyebrow">What Makes Q2 Different</div><h2 class="heading-xl" style="color:#fff">A different mathematical layer. A different category of solution.</h2></div>
+      <div><p class="body-copy mt24">Q2 operates at a different mathematical layer entirely. The approach is not incremental — it addresses the problem at a level that conventional tools were not designed to reach.</p></div>
+    </div>
+    <div class="comp-table-wrap">
+      <table class="comp-table">
+        <thead><tr><th style="width:220px"></th><th class="q2-col">Q2 Data Engine</th><th>Traditional Compression</th></tr></thead>
+        <tbody>
+          <tr><td>Transformation method</td><td class="q2-col">Mathematical representation restructuring</td><td>Statistical entropy reduction</td></tr>
+          <tr><td>Encryption compatibility</td><td class="q2-col"><span class="check">✓</span> Encryption-ready</td><td><span class="cross">—</span> Pre-encryption only</td></tr>
+          <tr><td>Data fidelity</td><td class="q2-col"><span class="check">✓</span> Exact recovery</td><td>Lossy or lossless</td></tr>
+          <tr><td>Infrastructure layer</td><td class="q2-col">Below application stack</td><td>Application layer</td></tr>
+          <tr><td>Size efficiency</td><td class="q2-col">Up to 50× (lab results)</td><td>2–5× typical</td></tr>
+          <tr><td>File-type agnostic</td><td class="q2-col"><span class="check">✓</span> Yes</td><td><span class="cross">—</span> Partial</td></tr>
+          <tr><td>Deployment model</td><td class="q2-col">Partner-led, infrastructure-integrated</td><td>Application or OS-level</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#2C0F6A">
+  <div class="section-inner">
+    <div><div class="eyebrow" style="color:var(--purple-xhi)">Where It Applies</div><h2 class="heading-xl" style="color:#fff">Built for the environments where data constraints are most severe.</h2></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(0,0,0,0.08);border-radius:10px;overflow:hidden;margin-top:48px">
+      <div style="background:#fff;padding:52px 44px;display:flex;flex-direction:column"><div style="font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.12em;color:rgba(108,63,162,0.5);margin-bottom:24px">ENV—01</div><div style="font-family:var(--serif);font-size:24px;color:var(--ink);margin-bottom:16px;line-height:1.2">Data Centres &amp; Enterprise</div><div style="font-size:13px;font-weight:300;color:#666;line-height:1.72;flex:1">Large-scale data environments where storage costs, replication overhead, and network bandwidth represent ongoing operational constraints.</div><div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:6px"><span class="tag">Storage</span><span class="tag">Backup</span><span class="tag">Replication</span><span class="tag">Egress</span></div></div>
+      <div style="background:#fff;padding:52px 44px;display:flex;flex-direction:column"><div style="font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.12em;color:rgba(108,63,162,0.5);margin-bottom:24px">ENV—02</div><div style="font-family:var(--serif);font-size:24px;color:var(--ink);margin-bottom:16px;line-height:1.2">Government &amp; Defence</div><div style="font-size:13px;font-weight:300;color:#666;line-height:1.72;flex:1">Classified and high-assurance environments where data volume, transmission security, and operational footprint are critical.</div><div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:6px"><span class="tag">Intelligence</span><span class="tag">Tactical networks</span><span class="tag">Classified storage</span></div></div>
+      <div style="background:#fff;padding:52px 44px;display:flex;flex-direction:column"><div style="font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.12em;color:rgba(108,63,162,0.5);margin-bottom:24px">ENV—03</div><div style="font-family:var(--serif);font-size:24px;color:var(--ink);margin-bottom:16px;line-height:1.2">AI Infrastructure &amp; HPC</div><div style="font-size:13px;font-weight:300;color:#666;line-height:1.72;flex:1">AI training pipelines, model repositories, and HPC workloads generating data at scales where conventional infrastructure is increasingly inadequate.</div><div style="margin-top:28px;display:flex;flex-wrap:wrap;gap:6px"><span class="tag">Training data</span><span class="tag">Model storage</span><span class="tag">HPC pipelines</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#130525">
+  <div class="section-inner">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end;margin-bottom:64px">
+      <div><div class="eyebrow">Industry Applications</div><h2 class="heading-xl" style="color:#fff">Applicable across the sectors where infrastructure is mission-critical.</h2></div>
+      <div><p class="body-copy">Q2 is relevant to any sector where data volume, transmission constraints, or storage costs represent structural operating challenges.</p></div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--border);border:1px solid var(--border);border-radius:8px;overflow:hidden">
+      <div style="background:var(--bg-2);padding:32px 28px"><div style="font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px">01</div><div style="font-size:14px;font-weight:500;color:var(--text);line-height:1.35;margin-bottom:8px">Defence &amp; Intelligence</div><div style="font-size:11px;font-weight:300;color:var(--text-mid);line-height:1.6">Classified data, bandwidth-constrained transmission, secure archiving</div></div>
+      <div style="background:var(--bg-2);padding:32px 28px"><div style="font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px">02</div><div style="font-size:14px;font-weight:500;color:var(--text);line-height:1.35;margin-bottom:8px">Federal Government</div><div style="font-size:11px;font-weight:300;color:var(--text-mid);line-height:1.6">Records management, inter-agency data sharing, compliance archiving</div></div>
+      <div style="background:var(--bg-2);padding:32px 28px"><div style="font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px">03</div><div style="font-size:14px;font-weight:500;color:var(--text);line-height:1.35;margin-bottom:8px">Financial Services</div><div style="font-size:11px;font-weight:300;color:var(--text-mid);line-height:1.6">Transaction data, audit trails, real-time replication, regulatory reporting</div></div>
+      <div style="background:var(--bg-2);padding:32px 28px"><div style="font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px">04</div><div style="font-size:14px;font-weight:500;color:var(--text);line-height:1.35;margin-bottom:8px">Healthcare &amp; Life Sciences</div><div style="font-size:11px;font-weight:300;color:var(--text-mid);line-height:1.6">Medical imaging, genomics, clinical data, long-term archiving</div></div>
+      <div style="background:var(--bg-2);padding:32px 28px"><div style="font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px">05</div><div style="font-size:14px;font-weight:500;color:var(--text);line-height:1.35;margin-bottom:8px">Satellite &amp; Edge Networks</div><div style="font-size:11px;font-weight:300;color:var(--text-mid);line-height:1.6">Uplink constraints, remote telemetry, latency-sensitive edge data</div></div>
+      <div style="background:var(--bg-2);padding:32px 28px"><div style="font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px">06</div><div style="font-size:14px;font-weight:500;color:var(--text);line-height:1.35;margin-bottom:8px">AI &amp; Machine Learning</div><div style="font-size:11px;font-weight:300;color:var(--text-mid);line-height:1.6">Training data pipelines, model repositories, inference infrastructure</div></div>
+      <div style="background:var(--bg-2);padding:32px 28px"><div style="font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px">07</div><div style="font-size:14px;font-weight:500;color:var(--text);line-height:1.35;margin-bottom:8px">Cloud &amp; Data Infrastructure</div><div style="font-size:11px;font-weight:300;color:var(--text-mid);line-height:1.6">Multi-cloud storage, egress costs, cross-region replication</div></div>
+      <div style="background:var(--bg-2);padding:32px 28px"><div style="font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-dim);margin-bottom:14px">08</div><div style="font-size:14px;font-weight:500;color:var(--text);line-height:1.35;margin-bottom:8px">Critical Infrastructure</div><div style="font-size:11px;font-weight:300;color:var(--text-mid);line-height:1.6">Operational data, industrial control systems, continuity archives</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#0A0318">
+  <div class="section-inner">
+    <div style="margin-bottom:56px"><div class="eyebrow">Work With Us</div><h2 class="heading-xl" style="color:#fff">The right conversation starts with the right door.</h2><p class="body-copy mt16">Two distinct pathways. Both require a credible counterparty.</p></div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);border-radius:10px;overflow:hidden">
+      <div style="padding:56px 52px;display:flex;flex-direction:column;min-height:400px;position:relative;overflow:hidden;background:var(--bg-2)">
+        <div style="position:absolute;bottom:-40%;right:-20%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(108,63,162,0.25) 0%,transparent 70%);pointer-events:none"></div>
+        <div style="font-family:var(--mono);font-size:9px;font-weight:400;letter-spacing:0.14em;text-transform:uppercase;color:var(--purple-xhi);margin-bottom:24px;position:relative">For Investors &amp; Strategic Partners</div>
+        <div style="font-family:var(--serif);font-size:34px;color:#fff;line-height:1.15;margin-bottom:16px;flex:1;position:relative">Investors &amp;<br>Partners</div>
+        <div style="font-size:14px;font-weight:300;color:var(--text-mid);line-height:1.7;margin-bottom:36px;max-width:380px;position:relative">Implexus is in active conversation with strategic investors and licensing partners. Engagement requires NDA and verification of institutional standing.</div>
+        <ul style="display:flex;flex-direction:column;gap:8px;margin-bottom:36px;position:relative">
+          <li style="font-size:12px;font-weight:400;color:var(--text-mid);display:flex;align-items:center;gap:8px"><span style="width:5px;height:5px;border-radius:1px;background:var(--purple-hi);flex-shrink:0;display:block"></span>Corporate Overview (controlled distribution)</li>
+          <li style="font-size:12px;font-weight:400;color:var(--text-mid);display:flex;align-items:center;gap:8px"><span style="width:5px;height:5px;border-radius:1px;background:var(--purple-hi);flex-shrink:0;display:block"></span>Technology Brief (NDA required)</li>
+          <li style="font-size:12px;font-weight:400;color:var(--text-mid);display:flex;align-items:center;gap:8px"><span style="width:5px;height:5px;border-radius:1px;background:var(--purple-hi);flex-shrink:0;display:block"></span>Programme Status Update</li>
+        </ul>
+        <a href="investor.html" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--purple-xhi);position:relative">Begin investor inquiry →</a>
+      </div>
+      <div style="padding:56px 52px;display:flex;flex-direction:column;min-height:400px;position:relative;overflow:hidden;background:var(--bg-3)">
+        <div style="position:absolute;bottom:-40%;right:-20%;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(155,112,204,0.15) 0%,transparent 70%);pointer-events:none"></div>
+        <div style="font-family:var(--mono);font-size:9px;font-weight:400;letter-spacing:0.14em;text-transform:uppercase;color:var(--purple-xhi);margin-bottom:24px;position:relative">For Engineers &amp; Technical Teams</div>
+        <div style="font-family:var(--serif);font-size:34px;color:#fff;line-height:1.15;margin-bottom:16px;flex:1;position:relative">Engineers &amp;<br>Technical Teams</div>
+        <div style="font-size:14px;font-weight:300;color:var(--text-mid);line-height:1.7;margin-bottom:36px;max-width:380px;position:relative">Technical stakeholders can request access to architecture documentation, methodology overview, and relevant validation data.</div>
+        <ul style="display:flex;flex-direction:column;gap:8px;margin-bottom:36px;position:relative">
+          <li style="font-size:12px;font-weight:400;color:var(--text-mid);display:flex;align-items:center;gap:8px"><span style="width:5px;height:5px;border-radius:1px;background:var(--purple-hi);flex-shrink:0;display:block"></span>Technical architecture overview</li>
+          <li style="font-size:12px;font-weight:400;color:var(--text-mid);display:flex;align-items:center;gap:8px"><span style="width:5px;height:5px;border-radius:1px;background:var(--purple-hi);flex-shrink:0;display:block"></span>Methodology documentation (gated)</li>
+          <li style="font-size:12px;font-weight:400;color:var(--text-mid);display:flex;align-items:center;gap:8px"><span style="width:5px;height:5px;border-radius:1px;background:var(--purple-hi);flex-shrink:0;display:block"></span>Integration pathway consultation</li>
+        </ul>
+        <a href="contact.html" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--purple-xhi);position:relative">Request technical access →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg-1);border-bottom:1px solid var(--border)">
+  <div class="section-inner">
+    <div><div class="eyebrow">Programme Status</div><h2 class="heading-xl" style="color:#fff">Where we are — and what comes next.</h2><p class="body-copy mt16" style="max-width:520px;margin-bottom:72px">The development journey began over three decades ago. Here is an honest account of where the programme stands today.</p></div>
+    <div style="display:flex;border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:56px">
+      <div style="flex:1;padding:28px 22px;background:rgba(108,63,162,0.05);border-right:1px solid var(--border)"><div style="font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.1em;color:var(--purple-hi);margin-bottom:12px">01</div><div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:6px">Foundational Research</div><div style="font-size:11px;font-weight:300;color:var(--text-mid);line-height:1.55">Mathematical framework developed. Core algorithm concepts established.</div><div class="badge-done">Complete</div></div>
+      <div style="flex:1;padding:28px 22px;background:rgba(108,63,162,0.05);border-right:1px solid var(--border)"><div style="font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.1em;color:var(--purple-hi);margin-bottom:12px">02</div><div style="font-size:13px;font-weight:500;color:var(--text);margin-bottom:6px">Systems Development</div><div style="font-size:11px;font-weight:300;color:var(--text-mid);line-height:1.55">Algorithmic frameworks formalised. Controlled demonstrations conducted.</div><div class="badge-done">Complete</div></div>
+      <div style="flex:1;padding:28px 22px;background:rgba(108,63,162,0.12);border-right:1px solid var(--border);border-top:2px solid var(--purple)"><div style="font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.1em;color:var(--purple-hi);margin-bottom:12px">03</div><div style="font-size:13px;font-weight:500;color:#fff;margin-bottom:6px">Validation Phase</div><div style="font-size:11px;font-weight:300;color:var(--text-mid);line-height:1.55">Internal validation complete. Third-party review in preparation.</div><div class="badge-now">▸ Active</div></div>
+      <div style="flex:1;padding:28px 22px;background:var(--bg-2);border-right:1px solid var(--border)"><div style="font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.1em;color:var(--text-dim);margin-bottom:12px">04</div><div style="font-size:13px;font-weight:500;color:var(--text-dim);margin-bottom:6px">Independent Review</div><div style="font-size:11px;font-weight:300;color:var(--text-dim);line-height:1.55">External technical audit and independent replication of lab results.</div><div class="badge-next">Forthcoming</div></div>
+      <div style="flex:1;padding:28px 22px;background:var(--bg-2)"><div style="font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.1em;color:var(--text-dim);margin-bottom:12px">05</div><div style="font-size:13px;font-weight:500;color:var(--text-dim);margin-bottom:6px">Commercial Deployment</div><div style="font-size:11px;font-weight:300;color:var(--text-dim);line-height:1.55">Partner-led integration into enterprise and government environments.</div><div class="badge-next">Forthcoming</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);border-radius:8px;overflow:hidden">
+      <div style="background:var(--bg-2);padding:32px 36px"><div style="font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--purple-hi);margin-bottom:12px">Current status</div><div style="font-size:15px;font-weight:500;color:var(--text);margin-bottom:8px;line-height:1.35">Internal validation complete across all test cases</div><div style="font-size:12px;font-weight:300;color:var(--text-mid);line-height:1.65">99.9% lossless recovery verified internally. 50× size reduction achieved in laboratory conditions on qualifying data types. All figures are internal results pending independent replication.</div></div>
+      <div style="background:var(--bg-2);padding:32px 36px"><div style="font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--purple-hi);margin-bottom:12px">Next milestones</div><div style="font-size:15px;font-weight:500;color:var(--text);margin-bottom:8px;line-height:1.35">Independent technical review and third-party validation</div><div style="font-size:12px;font-weight:300;color:var(--text-mid);line-height:1.65">Implexus will not publish performance claims as externally validated until independent replication is complete. Engagement with qualified reviewers is underway.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:#fff">
+  <div class="section-inner">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start">
+      <div><div class="eyebrow eyebrow-light">Resources</div><h3 class="heading-lg" style="color:#111">Controlled disclosure materials.</h3><p class="body-copy body-copy-light mt16">All documentation is distributed under controlled conditions. Access requires identity verification and, where applicable, execution of a non-disclosure agreement.</p><a href="contact.html" class="btn-primary-dark mt32">Request Access →</a></div>
+      <div style="border:1px solid rgba(0,0,0,0.09);border-radius:8px;overflow:hidden">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:22px 28px;background:#fff;border-bottom:1px solid rgba(0,0,0,0.07)"><div><h4 style="font-size:14px;font-weight:500;color:#111;margin-bottom:4px">Corporate Overview</h4><p style="font-size:11px;color:#999">Company, programme, and commercial context — PDF</p></div><div style="font-size:12px;font-weight:500;color:var(--purple)">Request →</div></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:22px 28px;background:#fff;border-bottom:1px solid rgba(0,0,0,0.07)"><div><h4 style="font-size:14px;font-weight:500;color:#111;margin-bottom:4px">Technical Overview</h4><p style="font-size:11px;color:#999">Architecture, methodology, and approach — NDA required</p></div><div style="font-size:12px;font-weight:500;color:var(--purple)">Request →</div></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:22px 28px;background:#fff;border-bottom:1px solid rgba(0,0,0,0.07)"><div><h4 style="font-size:14px;font-weight:500;color:#111;margin-bottom:4px">Infrastructure Brief</h4><p style="font-size:11px;color:#999">Deployment model and integration pathway — PDF</p></div><div style="font-size:12px;font-weight:500;color:var(--purple)">Request →</div></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:22px 28px;background:#fff"><div><h4 style="font-size:14px;font-weight:500;color:#111;margin-bottom:4px">Validation Summary</h4><p style="font-size:11px;color:#999">Internal results and methodology — gated access</p></div><div style="font-size:12px;font-weight:500;color:var(--purple)">Request →</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="background:var(--bg);border-top:1px solid var(--border);position:relative;overflow:hidden">
+  <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:800px;height:600px;background:radial-gradient(ellipse,rgba(108,63,162,0.18) 0%,transparent 65%);pointer-events:none"></div>
+  <div style="max-width:780px;margin:0 auto;text-align:center;position:relative">
+    <div class="eyebrow" style="justify-content:center">Begin</div>
+    <h2 class="heading-xl" style="color:#fff">Ready to explore the opportunity?</h2>
+    <p class="body-copy mt16">Implexus engages with a small number of qualified counterparties. If you represent an enterprise, government body, or institutional investor, we invite a structured conversation.</p>
+    <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin:32px 0;flex-wrap:wrap">
+      <a href="investor.html" class="btn-primary-dark">Investor Inquiry</a>
+      <a href="contact.html" class="btn-ghost-dark">Technical Access Request</a>
+    </div>
+    <p style="font-size:11px;font-weight:300;color:var(--text-dim);line-height:1.7;max-width:620px;margin:0 auto;border-top:1px solid var(--border);padding-top:28px">All engagement is subject to verification of institutional standing. Performance claims referenced on this site are internal laboratory results only, subject to ongoing independent validation. Nothing on this site constitutes a guarantee of performance, an offer of securities, or professional advice of any kind.</p>
+  </div>
+</section>
+
+<div style="background:var(--bg-1);border-top:1px solid var(--border);padding:80px 64px">
+  <div style="max-width:1200px;margin:0 auto">
+    <div style="margin-bottom:40px"><div class="eyebrow" style="color:var(--text-dim)">FAQ</div><h3 class="heading-lg" style="color:var(--text-mid)">Questions worth answering.</h3></div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);border-radius:8px;overflow:hidden">
+      <div style="background:var(--bg-2);padding:32px"><div style="font-size:14px;font-weight:400;color:#fff;margin-bottom:12px;line-height:1.4">Is Q2 a form of compression?</div><div style="font-size:12px;font-weight:300;color:var(--text-mid);line-height:1.7">No. Q2 operates at the mathematical representation layer — not through entropy reduction, pattern matching, or redundancy elimination. It is a different category of approach entirely.</div></div>
+      <div style="background:var(--bg-2);padding:32px"><div style="font-size:14px;font-weight:400;color:#fff;margin-bottom:12px;line-height:1.4">Is this quantum computing?</div><div style="font-size:12px;font-weight:300;color:var(--text-mid);line-height:1.7">No. Q2 runs on conventional hardware. It does not require quantum processors or any quantum infrastructure. The name Q2 refers to the programme designation, not a quantum property.</div></div>
+      <div style="background:var(--bg-2);padding:32px"><div style="font-size:14px;font-weight:400;color:#fff;margin-bottom:12px;line-height:1.4">What validation stage is the technology at?</div><div style="font-size:12px;font-weight:300;color:var(--text-mid);line-height:1.7">Internal validation is complete. The next milestone is independent third-party review. Implexus will not publish performance claims as externally validated until that process is complete.</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);border-radius:8px;overflow:hidden;margin-top:2px">
+      <div style="background:var(--bg-2);padding:32px"><div style="font-size:14px;font-weight:400;color:#fff;margin-bottom:12px;line-height:1.4">Does it work on all data types?</div><div style="font-size:12px;font-weight:300;color:var(--text-mid);line-height:1.7">No. Q2 shows strongest results on structured data with consistent internal form. Already-encrypted files and already-compressed media show reduced benefit. Implexus documents both successful and limited-result cases.</div></div>
+      <div style="background:var(--bg-2);padding:32px"><div style="font-size:14px;font-weight:400;color:#fff;margin-bottom:12px;line-height:1.4">How do I engage with Implexus?</div><div style="font-size:12px;font-weight:300;color:var(--text-mid);line-height:1.7">Implexus engages through two pathways: investor and partner inquiries via the investor portal, and technical discussions via the technical access request. All engagement requires identity verification.</div></div>
+    </div>
+  </div>
+</div>
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="site-footer-top">
+      <div>
+        <div class="site-footer-logo">
+          <div class="logo-mark"><span></span><span></span><span></span><span></span></div>
+          <span class="logo-text">Implexus</span>
+        </div>
+        <p class="site-footer-tagline">In Everything &amp; Everywhere</p>
+      </div>
+      <div class="site-footer-col"><h5>Navigation</h5><a href="technology.html">Technology</a><a href="approach.html">Approach</a><a href="usecases.html">Use Cases</a><a href="about.html">About</a></div><div class="site-footer-col"><h5>Company</h5><a href="about.html">About Implexus</a><a href="investor.html">Programme Status</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a></div><div class="site-footer-col"><h5>Resources</h5><a href="contact.html">Technical Overview</a><a href="contact.html">Corporate Overview</a><a href="faq.html">FAQ</a><a href="investor.html">Investor Overview</a></div>
+    </div>
+    <div class="site-footer-bottom">
+      <p class="site-footer-legal">The information on this website is provided for general informational purposes only. Technology descriptions are illustrative and subject to ongoing research, development, and independent validation. Performance figures cited are internal laboratory results only and do not constitute guarantees of performance. Nothing on this site constitutes an offer of securities, professional advice, or a representation of validated commercial capability.<br>© 2026 Implexus Data Technologies Inc. — Toronto, Canada</p>
+      <div class="site-footer-links"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
