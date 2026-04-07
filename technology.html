@@ -5,7 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Switzer:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="_shared.css"><title>Technology — Implexus Data Technologies</title></head>
+<link rel="stylesheet" href="_shared.css">
+<title>Technology — Implexus Data Technologies</title>
+<style>
+@media(max-width:810px){
+  .int-layout{grid-template-columns:1fr !important;padding:0 32px}
+  .int-sidebar{position:static !important;height:auto !important;border-right:none;border-bottom:1px solid rgba(0,0,0,0.08);padding:32px 0}
+  .int-content{padding:40px 0 60px}
+  .int-banner-inner{padding:0 32px}
+  .c-grid-2,.c-grid-3{grid-template-columns:1fr !important}
+  .tl-item{grid-template-columns:100px 1fr}
+  .pipeline-vert .pv-step{grid-template-columns:60px 1fr}
+}
+@media(max-width:390px){
+  .int-layout{padding:0 20px !important}
+  .int-banner-inner{padding:0 20px !important}
+  .int-sidebar{padding:24px 0}
+  .int-content{padding:32px 0 48px}
+  .tl-item{grid-template-columns:1fr !important;gap:4px}
+  .tl-stage{margin-bottom:4px}
+  .pv-step{grid-template-columns:48px 1fr !important;padding:16px 20px}
+  .c-card{padding:24px 20px}
+  .int-section-title{font-size:24px}
+  .int-banner-title{font-size:28px !important}
+}
+</style></head>
 <body>
 <nav id="nav">
   <a class="nav-logo" href="index.html"><div class="logo-mark"><span></span><span></span><span></span><span></span></div><span class="logo-text">Implexus</span></a>
