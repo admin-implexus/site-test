@@ -156,13 +156,13 @@ function closeNav(){document.getElementById("nav-mobile").classList.remove("open
 <section class="section" style="background:#1E0845;position:relative;overflow:hidden">
   <div style="position:absolute;right:-10%;top:20%;width:700px;height:700px;background:radial-gradient(circle,rgba(108,63,162,0.12) 0%,transparent 65%);pointer-events:none"></div>
   <div class="section-inner">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;margin-bottom:72px">
+    <div class="distinction-header" style="margin-bottom:72px">
       <div><div class="eyebrow">What Makes Q2 Different</div><h2 class="heading-xl" style="color:#fff">A different mathematical layer. A different category of solution.</h2></div>
       <div><p class="body-copy mt24">Q2 operates at a different mathematical layer entirely. The approach is not incremental — it addresses the problem at a level that conventional tools were not designed to reach.</p></div>
     </div>
     <div class="comp-table-wrap">
       <table class="comp-table">
-        <thead><tr><th style="width:220px"></th><th class="q2-col">Q2 Data Engine</th><th>Traditional Compression</th></tr></thead>
+        <thead><tr><th style="width:200px"></th><th class="q2-col" style="width:240px">Q2 Data Engine</th><th style="width:220px">Traditional Compression</th></tr></thead>
         <tbody>
           <tr><td>Transformation method</td><td class="q2-col">Mathematical representation restructuring</td><td>Statistical entropy reduction</td></tr>
           <tr><td>Encryption compatibility</td><td class="q2-col"><span class="check">✓</span> Encryption-ready</td><td><span class="cross">—</span> Pre-encryption only</td></tr>
@@ -176,6 +176,10 @@ function closeNav(){document.getElementById("nav-mobile").classList.remove("open
     </div>
   </div>
 </section>
+<style>
+.distinction-header{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+@media(max-width:810px){.distinction-header{grid-template-columns:1fr;gap:24px}}
+</style>
 
 <section class="section" style="background:#2C0F6A">
   <div class="section-inner">
