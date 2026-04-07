@@ -76,7 +76,7 @@ function closeNav(){document.getElementById("nav-mobile").classList.remove("open
 
 <section class="section" style="background:#fff;border-bottom:1px solid rgba(0,0,0,0.07)">
   <div class="section-inner">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start">
+    <div class="overview-grid-inline" style="display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start">
       <div>
         <div class="eyebrow eyebrow-light">About Implexus</div>
         <h2 class="heading-xl" style="color:#111;margin-bottom:24px;max-width:520px">Implexus addresses the structural limits of modern data infrastructure.</h2>
@@ -117,18 +117,18 @@ function closeNav(){document.getElementById("nav-mobile").classList.remove("open
 
 <div style="background:linear-gradient(135deg,#1A0840 0%,#2A1060 100%);padding:96px 64px;position:relative;overflow:hidden">
   <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:900px;height:400px;background:radial-gradient(ellipse,rgba(108,63,162,0.14) 0%,transparent 65%);pointer-events:none"></div>
-  <div style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);position:relative">
-    <div style="padding:0 64px;border-right:1px solid var(--border);text-align:center">
+  <div class="stats-grid-inline" style="max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);position:relative">
+    <div class="stats-block-inline" style="padding:0 64px;border-right:1px solid var(--border);text-align:center">
       <div style="font-family:var(--serif);font-size:clamp(72px,8vw,108px);font-weight:400;color:var(--purple-hi);line-height:1;text-shadow:0 0 60px rgba(155,112,204,0.5);margin-bottom:16px">50×</div>
       <div style="font-size:13px;font-weight:400;color:var(--text);line-height:1.5;margin-bottom:8px">Size reduction in laboratory conditions</div>
       <div style="font-family:var(--mono);font-size:11px;font-weight:300;color:var(--text-dim);line-height:1.6">Lab results only. Independent validation in preparation.</div>
     </div>
-    <div style="padding:0 64px;border-right:1px solid var(--border);text-align:center">
+    <div class="stats-block-inline" style="padding:0 64px;border-right:1px solid var(--border);text-align:center">
       <div style="font-family:var(--serif);font-size:clamp(72px,8vw,108px);font-weight:400;color:var(--purple-hi);line-height:1;text-shadow:0 0 60px rgba(155,112,204,0.5);margin-bottom:16px">99.9%</div>
       <div style="font-size:13px;font-weight:400;color:var(--text);line-height:1.5;margin-bottom:8px">Lossless recovery rate</div>
       <div style="font-family:var(--mono);font-size:11px;font-weight:300;color:var(--text-dim);line-height:1.6">Verified across all test cases to date. Exact recovery validated.</div>
     </div>
-    <div style="padding:0 64px;text-align:center">
+    <div class="stats-block-inline" style="padding:0 64px;text-align:center">
       <div style="font-family:var(--serif);font-size:clamp(72px,8vw,108px);font-weight:400;color:var(--purple-hi);line-height:1;text-shadow:0 0 60px rgba(155,112,204,0.5);margin-bottom:16px">0</div>
       <div style="font-size:13px;font-weight:400;color:var(--text);line-height:1.5;margin-bottom:8px">Changes required to existing workflows</div>
       <div style="font-family:var(--mono);font-size:11px;font-weight:300;color:var(--text-dim);line-height:1.6">Infrastructure-level integration. No application-layer changes needed.</div>
@@ -212,7 +212,29 @@ function closeNav(){document.getElementById("nav-mobile").classList.remove("open
 </section>
 <style>
 .distinction-header{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
-@media(max-width:810px){.distinction-header{grid-template-columns:1fr;gap:24px}}
+@media(max-width:810px){
+  .distinction-header{grid-template-columns:1fr;gap:24px}
+  .overview-grid-inline{grid-template-columns:1fr !important;gap:48px !important}
+  .stats-grid-inline{grid-template-columns:1fr !important;gap:0 !important}
+  .stats-block-inline{padding:40px 20px !important;border-right:none !important;border-bottom:1px solid rgba(255,255,255,0.07)}
+  .stats-block-inline:last-child{border-bottom:none}
+  .q2-header-inline{grid-template-columns:1fr !important;gap:24px !important}
+  .feature-grid-inline{grid-template-columns:1fr 1fr !important}
+  .industry-grid-inline{grid-template-columns:1fr 1fr !important}
+  .audience-grid-inline{grid-template-columns:1fr !important;gap:24px !important}
+  .env-grid-inline{grid-template-columns:1fr !important}
+  .where-header-inline{grid-template-columns:1fr !important;gap:24px !important}
+  .industry-header-inline{grid-template-columns:1fr !important;gap:24px !important}
+}
+@media(max-width:390px){
+  .overview-grid-inline{grid-template-columns:1fr !important;gap:32px !important}
+  .stats-grid-inline{grid-template-columns:1fr !important}
+  .stats-block-inline{padding:32px 20px !important}
+  .feature-grid-inline{grid-template-columns:1fr !important}
+  .industry-grid-inline{grid-template-columns:1fr !important}
+  .q2-header-inline{grid-template-columns:1fr !important}
+  .distinction-header{grid-template-columns:1fr;gap:20px}
+}
 </style>
 
 <section class="section" style="background:#2C0F6A">
