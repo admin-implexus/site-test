@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Implexus Data Technologies</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400&family=Switzer:wght@300;400;500;600&family=Roboto+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg:          #0A1015;
+  --bg-1:        #0E0E16;
+  --purple:      #6C3FA2;
+  --purple-hi:   #9B70CC;
+  --purple-xhi:  #C084FC;
+  --purple-glow: rgba(108,63,162,0.18);
+  --text:        #FFFFFF;
+  --text-mid:    #A8A0BC;
+  --text-dim:    rgba(168,160,188,0.40);
+  --border:      rgba(255,255,255,0.07);
+  --border-hi:   rgba(255,255,255,0.13);
+  --serif:       'Amiri', Georgia, serif;
+  --sans:        'Switzer', system-ui, sans-serif;
+  --mono:        'Roboto Mono', monospace;
+  --radius:      6px;
+  --nav-h:       68px;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  height: var(--nav-h);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 48px;
+  background: rgba(10,16,21,0.80);
+  backdrop-filter: blur(20px) saturate(1.5);
+  border-bottom: 1px solid var(--border);
+}
+.nav-logo {
+  display: flex; align-items: center; gap: 10px; cursor: pointer;
+  text-decoration: none;
+}
+.logo-mark {
+  width: 26px; height: 26px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 3px;
+}
+.logo-mark span {
+  border-radius: 2px; background: var(--purple-hi);
+}
+.logo-mark span:nth-child(2),
+.logo-mark span:nth-child(3) { opacity: 0.28; }
+.logo-text {
+  font-size: 15px; font-weight: 500;
+  letter-spacing: -0.02em; color: #fff;
+}
+.nav-cta {
+  font-size: 13px; font-weight: 500;
+  padding: 8px 20px; border-radius: var(--radius);
+  background: var(--purple-glow);
+  border: 1px solid rgba(108,63,162,0.42);
+  color: var(--purple-xhi); cursor: pointer;
+  transition: all 0.2s; text-decoration: none;
+  display: inline-block;
+}
+.nav-cta:hover {
+  background: rgba(108,63,162,0.32); color: #fff;
+}
+
+/* ── PAGE ── */
+.page {
+  min-height: 100vh;
+  padding-top: var(--nav-h);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+}
+
+/* ── BACKGROUND LAYERS ── */
+.bg-grid {
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background-image:
+    linear-gradient(rgba(108,63,162,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(108,63,162,0.04) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+.bg-orb-1 {
+  position: fixed; top: -20%; left: -10%;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(108,63,162,0.13) 0%, transparent 68%);
+  pointer-events: none; z-index: 0;
+  animation: drift1 20s ease-in-out infinite;
+}
+.bg-orb-2 {
+  position: fixed; bottom: -15%; right: -8%;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(108,63,162,0.08) 0%, transparent 68%);
+  pointer-events: none; z-index: 0;
+  animation: drift2 26s ease-in-out infinite;
+}
+@keyframes drift1 {
+  0%, 100% { transform: translate(0, 0); }
+  33%       { transform: translate(40px, -30px); }
+  66%       { transform: translate(-20px, 40px); }
+}
+@keyframes drift2 {
+  0%, 100% { transform: translate(0, 0); }
+  50%       { transform: translate(-50px, 25px); }
+}
+
+/* ── CANVAS ── */
+canvas {
+  position: fixed; inset: 0;
+  width: 100%; height: 100%;
+  z-index: 0; opacity: 0.28;
+  pointer-events: none;
+}
+
+/* ── CONTENT ── */
+.content {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column;
+  align-items: flex-start;
+  max-width: 900px;
+  width: 100%;
+  padding: 0 64px;
+}
+
+/* Three-part heading unit */
+.stroke {
+  display: block;
+  width: 44px; height: 1.5px;
+  background: var(--purple);
+  margin-bottom: 10px;
+  animation: fadeUp 0.6s 0.05s ease forwards; opacity: 0;
+}
+.eyebrow {
+  display: flex; align-items: center; gap: 9px;
+  font-family: var(--mono); font-size: 11px; font-weight: 400;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  color: var(--purple); margin-bottom: 12px;
+  animation: fadeUp 0.6s 0.1s ease forwards; opacity: 0;
+}
+.eyebrow-sq {
+  width: 7px; height: 7px;
+  background: var(--purple); flex-shrink: 0;
+}
+
+/* Giant 404 */
+.error-num {
+  font-family: var(--serif); font-weight: 400;
+  font-size: clamp(120px, 18vw, 220px);
+  color: transparent;
+  letter-spacing: -0.04em;
+  line-height: 0.9;
+  margin-bottom: 32px;
+  -webkit-text-stroke: 1px rgba(155,112,204,0.35);
+  position: relative;
+  animation: fadeUp 0.7s 0.15s ease forwards; opacity: 0;
+  user-select: none;
+}
+.error-num::before {
+  content: '404';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(108,63,162,0.55) 0%, rgba(155,112,204,0.2) 50%, transparent 80%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-stroke: 0;
+}
+
+/* Headline */
+.headline {
+  font-family: var(--serif); font-weight: 400;
+  font-size: clamp(32px, 4.5vw, 56px);
+  color: #fff; line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+  animation: fadeUp 0.7s 0.2s ease forwards; opacity: 0;
+}
+.headline em {
+  font-style: normal;
+  color: var(--purple-hi);
+}
+
+/* Sub-copy */
+.sub {
+  font-size: 16px; font-weight: 300;
+  color: var(--text-mid); line-height: 1.72;
+  max-width: 480px; margin-bottom: 48px;
+  animation: fadeUp 0.7s 0.28s ease forwards; opacity: 0;
+}
+
+/* CTA row */
+.cta-row {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  animation: fadeUp 0.7s 0.36s ease forwards; opacity: 0;
+}
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 500;
+  padding: 13px 28px; border-radius: var(--radius);
+  background: var(--purple); color: #fff;
+  border: none; cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 0 28px rgba(108,63,162,0.38);
+  text-decoration: none;
+}
+.btn-primary:hover {
+  background: var(--purple-hi);
+  box-shadow: 0 0 44px rgba(108,63,162,0.6);
+  transform: translateY(-1px);
+}
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 14px; font-weight: 400;
+  padding: 12px 26px; border-radius: var(--radius);
+  border: 1px solid var(--border-hi);
+  color: var(--text-mid); background: none;
+  cursor: pointer; transition: all 0.2s;
+  text-decoration: none;
+}
+.btn-ghost:hover { color: #fff; border-color: rgba(255,255,255,0.3); }
+
+/* Divider + nav links */
+.nav-hint {
+  margin-top: 56px; padding-top: 40px;
+  border-top: 1px solid var(--border);
+  width: 100%;
+  animation: fadeUp 0.7s 0.44s ease forwards; opacity: 0;
+}
+.nav-hint-label {
+  font-family: var(--mono); font-size: 9px; font-weight: 400;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--text-dim); margin-bottom: 18px; display: block;
+}
+.nav-hint-links {
+  display: flex; align-items: center; gap: 2px; flex-wrap: wrap;
+}
+.nav-hint-links a {
+  font-size: 13px; font-weight: 400;
+  color: var(--text-mid); text-decoration: none;
+  padding: 6px 14px; border-radius: 20px;
+  transition: color 0.2s, background 0.2s;
+}
+.nav-hint-links a:hover {
+  color: #fff; background: rgba(255,255,255,0.04);
+}
+.nav-hint-sep {
+  width: 3px; height: 3px; border-radius: 50%;
+  background: var(--border-hi); flex-shrink: 0;
+}
+
+/* Reveal animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── TABLET — 900px ── */
+@media (max-width: 960px) {
+  nav { padding: 0 32px; }
+  .content { padding: 0 40px; }
+  .error-num { font-size: clamp(100px, 16vw, 160px); }
+  .headline  { font-size: clamp(28px, 4vw, 44px); }
+  .sub       { font-size: 15px; }
+  .bg-orb-1  { width: 500px; height: 500px; }
+  .bg-orb-2  { width: 440px; height: 440px; }
+}
+
+/* ── MOBILE — 390px ── */
+@media (max-width: 480px) {
+  :root { --nav-h: 60px; }
+  nav {
+    padding: 0 20px;
+  }
+  .nav-cta { display: none; }
+  .content {
+    padding: 0 24px;
+    align-items: flex-start;
+  }
+  .error-num {
+    font-size: clamp(88px, 26vw, 120px);
+    margin-bottom: 24px;
+    -webkit-text-stroke: 1px rgba(155,112,204,0.28);
+  }
+  .headline {
+    font-size: clamp(26px, 7.5vw, 36px);
+    margin-bottom: 16px;
+  }
+  .sub {
+    font-size: 14px;
+    margin-bottom: 36px;
+    max-width: 100%;
+  }
+  .cta-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+  .btn-primary, .btn-ghost {
+    width: 100%; justify-content: center;
+    font-size: 13px; padding: 13px 20px;
+  }
+  .nav-hint { margin-top: 40px; padding-top: 28px; }
+  .nav-hint-links { gap: 0; }
+  .nav-hint-links a { padding: 8px 10px; font-size: 13px; }
+  .nav-hint-sep { display: none; }
+  .bg-orb-1 { width: 320px; height: 320px; top: -5%; left: -15%; }
+  .bg-orb-2 { width: 280px; height: 280px; }
+  .bg-grid  { background-size: 40px 40px; }
+}
+</style>
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="bg-orb-1"></div>
+<div class="bg-orb-2"></div>
+<canvas id="c"></canvas>
+
+<!-- Nav -->
+<nav>
+  <a href="/" class="nav-logo">
+    <div class="logo-mark">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <span class="logo-text">Implexus</span>
+  </a>
+  <a href="/" class="nav-cta">Return Home</a>
+</nav>
+
+<!-- 404 content -->
+<div class="page">
+  <div class="content">
+
+    <span class="stroke"></span>
+    <div class="eyebrow">
+      <span class="eyebrow-sq"></span>
+      Error 404
+    </div>
+
+    <div class="error-num">404</div>
+
+    <h1 class="headline">
+      This page does not<br>
+      exist at <em>this layer.</em>
+    </h1>
+
+    <p class="sub">
+      The address you followed leads nowhere in our infrastructure. Return to the overview or navigate to the section you were looking for.
+    </p>
+
+    <div class="cta-row">
+      <a href="/" class="btn-primary">Return to Overview</a>
+      <a href="/contact" class="btn-ghost">Contact Implexus</a>
+    </div>
+
+    <div class="nav-hint">
+      <span class="nav-hint-label">Or go directly to</span>
+      <div class="nav-hint-links">
+        <a href="/technology">Technology</a>
+        <span class="nav-hint-sep"></span>
+        <a href="/usecases">Use Cases</a>
+        <span class="nav-hint-sep"></span>
+        <a href="/approach">Approach</a>
+        <span class="nav-hint-sep"></span>
+        <a href="/about">About</a>
+        <span class="nav-hint-sep"></span>
+        <a href="/investor">Investor Overview</a>
+        <span class="nav-hint-sep"></span>
+        <a href="/faq">FAQ</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script>
+/* Particle canvas */
+(function() {
+  const canvas = document.getElementById('c');
+  const ctx = canvas.getContext('2d');
+  let W, H, nodes = [];
+  const N = 60, DIST = 160;
+
+  function resize() {
+    W = canvas.width  = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  function init() {
+    nodes = [];
+    for (let i = 0; i < N; i++) {
+      nodes.push({
+        x:  Math.random() * W,
+        y:  Math.random() * H,
+        vx: (Math.random() - 0.5) * 0.24,
+        vy: (Math.random() - 0.5) * 0.24,
+        r:  Math.random() < 0.2 ? 2 : 1.2,
+        p:  Math.random() < 0.25
+      });
+    }
+  }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    for (let i = 0; i < nodes.length; i++) {
+      for (let j = i + 1; j < nodes.length; j++) {
+        const dx = nodes[i].x - nodes[j].x;
+        const dy = nodes[i].y - nodes[j].y;
+        const d  = Math.sqrt(dx*dx + dy*dy);
+        if (d < DIST) {
+          ctx.beginPath();
+          ctx.moveTo(nodes[i].x, nodes[i].y);
+          ctx.lineTo(nodes[j].x, nodes[j].y);
+          ctx.strokeStyle = `rgba(155,112,204,${(1 - d/DIST) * 0.25})`;
+          ctx.lineWidth = 0.6;
+          ctx.stroke();
+        }
+      }
+    }
+    for (const n of nodes) {
+      ctx.beginPath();
+      ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+      ctx.fillStyle = n.p
+        ? 'rgba(155,112,204,0.65)'
+        : 'rgba(255,255,255,0.35)';
+      ctx.fill();
+      n.x += n.vx; n.y += n.vy;
+      if (n.x < -10) n.x = W + 10;
+      if (n.x > W + 10) n.x = -10;
+      if (n.y < -10) n.y = H + 10;
+      if (n.y > H + 10) n.y = -10;
+    }
+    requestAnimationFrame(draw);
+  }
+  resize(); init(); draw();
+  window.addEventListener('resize', () => { resize(); init(); });
+})();
+</script>
+</body>
+</html>
