@@ -48,6 +48,13 @@
   .site-footer-links{flex-direction:column;gap:10px}
   .cta-band{padding:56px 20px !important}
   .comp-table-wrap{margin:0 -20px;padding:0 20px}
+  .about-hero-grid{grid-template-columns:1fr !important}
+  .about-who-grid{grid-template-columns:1fr !important}
+  .about-principles-grid{grid-template-columns:1fr !important}
+  .about-how-grid{grid-template-columns:1fr !important}
+  .about-work-grid{grid-template-columns:1fr !important}
+  .about-leadership-grid{grid-template-columns:1fr !important}
+  .about-mini-grid{grid-template-columns:1fr !important}
 }
 </style></head>
 <body>
@@ -58,7 +65,7 @@
 <div style="background:var(--bg);padding:calc(var(--nav-h) + 56px) 0 80px;position:relative;overflow:hidden;border-bottom:1px solid var(--border)">
   <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(108,63,162,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(108,63,162,0.04) 1px,transparent 1px);background-size:56px 56px;pointer-events:none"></div>
   <div style="position:absolute;top:-20%;right:-5%;width:700px;height:700px;background:radial-gradient(circle,rgba(108,63,162,0.12) 0%,transparent 70%);pointer-events:none"></div>
-  <div class="container" style="position:relative;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end">
+  <div class="container about-hero-grid" style="position:relative;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:end">
     <div>
       <div class="eyebrow" style="color:var(--purple-hi);margin-bottom:20px">About Implexus</div>
       <h1 class="heading-xl" style="color:#fff;margin-bottom:20px">A deep-tech company built on decades of research.</h1>
@@ -78,14 +85,14 @@
 
 <section style="background:#fff;padding:100px 0;border-bottom:1px solid rgba(0,0,0,0.07)">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start">
+    <div class="about-who-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start">
       <div>
         <div class="eyebrow eyebrow-light" style="margin-bottom:16px">Who we are</div>
         <h2 class="heading-xl" style="color:#111;margin-bottom:24px">Built on a research foundation nobody else was building on.</h2>
         <p class="body-copy body-copy-light">Implexus Data Technologies develops proprietary data transformation systems for enterprise and government infrastructure environments. Our focus is on deployment models that prioritise validation, governance, and long-term reliability over speed to market.</p>
         <p class="body-copy body-copy-light mt16">The company's core technology — the Q2 Data Engine — is the result of sustained research across applied mathematics, data systems engineering, and hardware architecture.</p>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(0,0,0,0.07);border-radius:8px;overflow:hidden;align-self:start">
+      <div class="about-mini-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(0,0,0,0.07);border-radius:8px;overflow:hidden;align-self:start">
         <div style="background:#fff;padding:28px 24px"><div class="eyebrow-mono" style="color:var(--purple);margin-bottom:8px">Focus</div><p style="font-size:13px;font-weight:300;color:#555;line-height:1.65">Enterprise &amp; government infrastructure environments</p></div>
         <div style="background:#fff;padding:28px 24px"><div class="eyebrow-mono" style="color:var(--purple);margin-bottom:8px">Deployment</div><p style="font-size:13px;font-weight:300;color:#555;line-height:1.65">Partner-led, governance-first, NDA-gated</p></div>
         <div style="background:#fff;padding:28px 24px"><div class="eyebrow-mono" style="color:var(--purple);margin-bottom:8px">Approach</div><p style="font-size:13px;font-weight:300;color:#555;line-height:1.65">Validation before claims, evidence before publication</p></div>
@@ -99,7 +106,7 @@
   <div class="container">
     <div class="eyebrow eyebrow-light" style="margin-bottom:16px">What we stand for</div>
     <h2 class="heading-xl" style="color:#111;margin-bottom:48px;max-width:600px">Three principles we operate by. No exceptions.</h2>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(0,0,0,0.07);border-radius:8px;overflow:hidden">
+    <div class="about-principles-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(0,0,0,0.07);border-radius:8px;overflow:hidden">
       <div style="background:#fff;padding:40px 36px"><div style="width:36px;height:36px;border-radius:6px;background:var(--glow-xs);border:1px solid rgba(108,63,162,0.2);display:flex;align-items:center;justify-content:center;margin-bottom:20px"><span style="font-family:var(--mono);font-size:11px;color:var(--purple);font-weight:500">01</span></div><h3 style="font-family:var(--serif);font-size:20px;font-weight:500;color:#111;margin-bottom:12px;line-height:1.25">Rigour over rhetoric</h3><p style="font-size:13px;font-weight:300;color:#666;line-height:1.72">We make claims we can support. We acknowledge what we don't yet know. We correct ourselves when evidence demands it. This is not a PR posture — it is how the science works.</p></div>
       <div style="background:#fff;padding:40px 36px"><div style="width:36px;height:36px;border-radius:6px;background:var(--glow-xs);border:1px solid rgba(108,63,162,0.2);display:flex;align-items:center;justify-content:center;margin-bottom:20px"><span style="font-family:var(--mono);font-size:11px;color:var(--purple);font-weight:500">02</span></div><h3 style="font-family:var(--serif);font-size:20px;font-weight:500;color:#111;margin-bottom:12px;line-height:1.25">Collaboration over control</h3><p style="font-size:13px;font-weight:300;color:#666;line-height:1.72">The best infrastructure solutions are built with the people who operate the infrastructure. Our partner model exists because we genuinely need the input — not just the distribution channel.</p></div>
       <div style="background:#fff;padding:40px 36px"><div style="width:36px;height:36px;border-radius:6px;background:var(--glow-xs);border:1px solid rgba(108,63,162,0.2);display:flex;align-items:center;justify-content:center;margin-bottom:20px"><span style="font-family:var(--mono);font-size:11px;color:var(--purple);font-weight:500">03</span></div><h3 style="font-family:var(--serif);font-size:20px;font-weight:500;color:#111;margin-bottom:12px;line-height:1.25">Long-cycle thinking</h3><p style="font-size:13px;font-weight:300;color:#666;line-height:1.72">Implexus has been working on this problem across multiple decades. We are not optimising for the next quarter. We are optimising for the answer being right when it matters most.</p></div>
@@ -109,13 +116,13 @@
 
 <section style="background:#1E0845;padding:100px 0">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start">
+    <div class="about-how-grid" style="display:grid;grid-template-columns:1fr 2fr;gap:80px;align-items:start">
       <div>
         <div class="eyebrow" style="margin-bottom:16px">How we work</div>
         <h2 class="heading-xl" style="color:#fff;margin-bottom:20px">The way we approach every decision.</h2>
         <p class="body-copy">From how we conduct research, to how we talk about it, to how we choose to grow.</p>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(255,255,255,0.06);border-radius:8px;overflow:hidden">
+      <div class="about-work-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(255,255,255,0.06);border-radius:8px;overflow:hidden">
         <div style="background:rgba(255,255,255,0.04);padding:32px 28px"><div class="eyebrow-mono" style="color:var(--purple-hi);margin-bottom:10px">Research</div><h4 style="font-size:14px;font-weight:500;color:#fff;margin-bottom:8px">Validate before we build</h4><p style="font-size:12px;font-weight:300;color:var(--text-mid);line-height:1.65">Every engineering decision traces back to a theoretical foundation. We don't claim results until the tests confirm them.</p></div>
         <div style="background:rgba(255,255,255,0.04);padding:32px 28px"><div class="eyebrow-mono" style="color:var(--purple-hi);margin-bottom:10px">Disclosure</div><h4 style="font-size:14px;font-weight:500;color:#fff;margin-bottom:8px">Controlled, not secretive</h4><p style="font-size:12px;font-weight:300;color:var(--text-mid);line-height:1.65">Technical documentation is available under a structured disclosure process — not behind a marketing wall.</p></div>
         <div style="background:rgba(255,255,255,0.04);padding:32px 28px"><div class="eyebrow-mono" style="color:var(--purple-hi);margin-bottom:10px">Engagement</div><h4 style="font-size:14px;font-weight:500;color:#fff;margin-bottom:8px">Structured conversations only</h4><p style="font-size:12px;font-weight:300;color:var(--text-mid);line-height:1.65">Every engagement begins with a clear understanding of the counterparty's environment, requirements, and intent.</p></div>
@@ -132,7 +139,7 @@
     <div class="eyebrow eyebrow-light" style="margin-bottom:16px">Leadership</div>
     <h2 class="heading-xl" style="color:#111;margin-bottom:12px">The people behind the programme.</h2>
     <p class="body-copy body-copy-light" style="max-width:560px;margin-bottom:48px">Senior research personnel are not publicly identified at this stage. Core leadership is accessible through structured engagement.</p>
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(0,0,0,0.07);border-radius:8px;overflow:hidden">
+    <div class="about-leadership-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(0,0,0,0.07);border-radius:8px;overflow:hidden">
       <div style="background:#fff;padding:32px 28px"><div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#E8E0F8,#C8B4E8);display:flex;align-items:center;justify-content:center;margin-bottom:20px;font-size:22px">👤</div><div style="font-size:15px;font-weight:600;color:#111;margin-bottom:4px">Nigel Fenty</div><div style="font-family:var(--mono);font-size:10px;color:var(--purple);margin-bottom:10px;letter-spacing:0.06em;text-transform:uppercase">Chief Executive Officer</div><p style="font-size:12px;font-weight:300;color:#777;line-height:1.6">Strategic direction, investor and partner relations, and executive governance of the Implexus programme.</p></div>
       <div style="background:#fff;padding:32px 28px"><div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#E8E0F8,#C8B4E8);display:flex;align-items:center;justify-content:center;margin-bottom:20px;font-size:22px">👤</div><div style="font-size:15px;font-weight:600;color:#111;margin-bottom:4px">Dan Holland</div><div style="font-family:var(--mono);font-size:10px;color:var(--purple);margin-bottom:10px;letter-spacing:0.06em;text-transform:uppercase">Chief Technology Officer</div><p style="font-size:12px;font-weight:300;color:#777;line-height:1.6">Technology architecture, R&amp;D programme leadership, and technical stakeholder engagement.</p></div>
       <div style="background:var(--bg);padding:32px 28px"><div style="width:56px;height:56px;border-radius:50%;background:rgba(108,63,162,0.15);display:flex;align-items:center;justify-content:center;margin-bottom:20px;font-size:22px">🔬</div><div style="font-size:15px;font-weight:600;color:rgba(255,255,255,0.6);margin-bottom:4px">Research Team</div><div style="font-family:var(--mono);font-size:10px;color:var(--purple-hi);margin-bottom:10px;letter-spacing:0.06em;text-transform:uppercase">Core Research &amp; Engineering</div><p style="font-size:12px;font-weight:300;color:rgba(255,255,255,0.35);line-height:1.6">Senior research personnel are not publicly identified during this phase of development.</p></div>
