@@ -25,6 +25,8 @@
   .site-footer-top{grid-template-columns:1fr 1fr !important}
   .site-footer-bottom{flex-direction:column;gap:20px}
   .cta-band{padding:72px 32px !important}
+  .contact-main-grid{grid-template-columns:1fr !important;gap:48px !important}
+  .contact-name-grid{grid-template-columns:1fr 1fr !important}
 }
 @media(max-width:390px){
   .int-layout{padding:0 20px !important}
@@ -48,6 +50,8 @@
   .site-footer-links{flex-direction:column;gap:10px}
   .cta-band{padding:56px 20px !important}
   .comp-table-wrap{margin:0 -20px;padding:0 20px}
+  .contact-main-grid{grid-template-columns:1fr !important;gap:32px !important}
+  .contact-name-grid{grid-template-columns:1fr !important}
 }
 </style></head>
 <body>
@@ -66,7 +70,7 @@
 </div>
 
 <section style="background:#fff;padding:96px 0">
-  <div class="container" style="display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start">
+  <div class="container contact-main-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:start">
     <div>
       <div class="eyebrow eyebrow-light" style="margin-bottom:20px">What to expect</div>
       <h2 class="heading-xl" style="color:#111;margin-bottom:24px;max-width:440px">We respond to every qualified enquiry.</h2>
@@ -82,7 +86,7 @@
       <div style="background:#F8F7F5;border-radius:10px;padding:44px;border:1px solid rgba(0,0,0,0.08)">
         <div class="eyebrow eyebrow-light" style="margin-bottom:20px">Send an enquiry</div>
         <div style="display:flex;flex-direction:column;gap:16px">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+          <div class="contact-name-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
             <div><label style="font-family:var(--mono);font-size:9px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:rgba(18,18,15,0.45);display:block;margin-bottom:6px">First name</label><input placeholder="First name" style="width:100%;padding:11px 14px;background:#fff;border:1px solid rgba(0,0,0,0.12);border-radius:5px;font-size:13px;font-weight:300;color:#111;font-family:var(--sans);outline:none;transition:border-color 0.2s"/></div>
             <div><label style="font-family:var(--mono);font-size:9px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;color:rgba(18,18,15,0.45);display:block;margin-bottom:6px">Last name</label><input placeholder="Last name" style="width:100%;padding:11px 14px;background:#fff;border:1px solid rgba(0,0,0,0.12);border-radius:5px;font-size:13px;font-weight:300;color:#111;font-family:var(--sans);outline:none;transition:border-color 0.2s"/></div>
           </div>
