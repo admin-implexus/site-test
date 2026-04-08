@@ -226,6 +226,9 @@ body{overflow-x:hidden}
   .env-grid-inline{grid-template-columns:1fr !important}
   .industry-header-inline{grid-template-columns:1fr !important;gap:24px !important}
   .prog-track-inline{flex-direction:column !important}
+  .status-info-inline{grid-template-columns:1fr !important}
+  .status-info-inline{grid-template-columns:1fr !important}
+  .resources-grid-inline{grid-template-columns:1fr !important;gap:40px !important}
   .faq-grid-inline{grid-template-columns:1fr !important}
   .faq-grid-2-inline{grid-template-columns:1fr !important}
   .faq-section-inline{padding:64px 32px !important}
@@ -245,6 +248,9 @@ body{overflow-x:hidden}
   .env-grid-inline{grid-template-columns:1fr !important}
   .industry-header-inline{grid-template-columns:1fr !important}
   .prog-track-inline{flex-direction:column !important}
+  .status-info-inline{grid-template-columns:1fr !important}
+  .status-info-inline{grid-template-columns:1fr !important}
+  .resources-grid-inline{grid-template-columns:1fr !important;gap:40px !important}
   .faq-grid-inline{grid-template-columns:1fr !important}
   .faq-grid-2-inline{grid-template-columns:1fr !important}
   .faq-section-inline{padding:48px 20px !important}
@@ -326,7 +332,7 @@ body{overflow-x:hidden}
       <div style="flex:1;padding:28px 22px;background:var(--bg-2);border-right:1px solid var(--border)"><div style="font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.1em;color:var(--text-dim);margin-bottom:12px">04</div><div style="font-size:13px;font-weight:500;color:var(--text-dim);margin-bottom:6px">Independent Review</div><div style="font-size:11px;font-weight:300;color:var(--text-dim);line-height:1.55">External technical audit and independent replication of lab results.</div><div class="badge-next">Forthcoming</div></div>
       <div style="flex:1;padding:28px 22px;background:var(--bg-2)"><div style="font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.1em;color:var(--text-dim);margin-bottom:12px">05</div><div style="font-size:13px;font-weight:500;color:var(--text-dim);margin-bottom:6px">Commercial Deployment</div><div style="font-size:11px;font-weight:300;color:var(--text-dim);line-height:1.55">Partner-led integration into enterprise and government environments.</div><div class="badge-next">Forthcoming</div></div>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);border-radius:8px;overflow:hidden">
+    <div class="status-info-inline" style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--border);border-radius:8px;overflow:hidden">
       <div style="background:var(--bg-2);padding:32px 36px"><div style="font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--purple-hi);margin-bottom:12px">Current status</div><div style="font-size:15px;font-weight:500;color:var(--text);margin-bottom:8px;line-height:1.35">Internal validation complete across all test cases</div><div style="font-size:12px;font-weight:300;color:var(--text-mid);line-height:1.65">99.9% lossless recovery verified internally. 50× size reduction achieved in laboratory conditions on qualifying data types. All figures are internal results pending independent replication.</div></div>
       <div style="background:var(--bg-2);padding:32px 36px"><div style="font-family:var(--mono);font-size:9px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--purple-hi);margin-bottom:12px">Next milestones</div><div style="font-size:15px;font-weight:500;color:var(--text);margin-bottom:8px;line-height:1.35">Independent technical review and third-party validation</div><div style="font-size:12px;font-weight:300;color:var(--text-mid);line-height:1.65">Implexus will not publish performance claims as externally validated until independent replication is complete. Engagement with qualified reviewers is underway.</div></div>
     </div>
@@ -335,13 +341,13 @@ body{overflow-x:hidden}
 
 <section class="section" style="background:#fff">
   <div class="section-inner">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start">
+    <div class="resources-grid-inline" style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start">
       <div><div class="eyebrow eyebrow-light">Resources</div><h3 class="heading-lg" style="color:#111">Controlled disclosure materials.</h3><p class="body-copy body-copy-light mt16">All documentation is distributed under controlled conditions. Access requires identity verification and, where applicable, execution of a non-disclosure agreement.</p><a href="contact.html" class="btn-primary-dark mt32">Request Access →</a></div>
       <div style="border:1px solid rgba(0,0,0,0.09);border-radius:8px;overflow:hidden">
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:22px 28px;background:#fff;border-bottom:1px solid rgba(0,0,0,0.07)"><div><h4 style="font-size:14px;font-weight:500;color:#111;margin-bottom:4px">Corporate Overview</h4><p style="font-size:11px;color:#999">Company, programme, and commercial context — PDF</p></div><div style="font-size:12px;font-weight:500;color:var(--purple)">Request →</div></div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:22px 28px;background:#fff;border-bottom:1px solid rgba(0,0,0,0.07)"><div><h4 style="font-size:14px;font-weight:500;color:#111;margin-bottom:4px">Technical Overview</h4><p style="font-size:11px;color:#999">Architecture, methodology, and approach — NDA required</p></div><div style="font-size:12px;font-weight:500;color:var(--purple)">Request →</div></div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:22px 28px;background:#fff;border-bottom:1px solid rgba(0,0,0,0.07)"><div><h4 style="font-size:14px;font-weight:500;color:#111;margin-bottom:4px">Infrastructure Brief</h4><p style="font-size:11px;color:#999">Deployment model and integration pathway — PDF</p></div><div style="font-size:12px;font-weight:500;color:var(--purple)">Request →</div></div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:22px 28px;background:#fff"><div><h4 style="font-size:14px;font-weight:500;color:#111;margin-bottom:4px">Validation Summary</h4><p style="font-size:11px;color:#999">Internal results and methodology — gated access</p></div><div style="font-size:12px;font-weight:500;color:var(--purple)">Request →</div></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:22px 28px;background:#fff;border-bottom:1px solid rgba(0,0,0,0.07);gap:16px"><div style="min-width:0"><h4 style="font-size:14px;font-weight:500;color:#111;margin-bottom:4px">Corporate Overview</h4><p style="font-size:11px;color:#999">Company, programme, and commercial context — PDF</p></div><div style="font-size:12px;font-weight:500;color:var(--purple);flex-shrink:0">Request →</div></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:22px 28px;background:#fff;border-bottom:1px solid rgba(0,0,0,0.07);gap:16px"><div style="min-width:0"><h4 style="font-size:14px;font-weight:500;color:#111;margin-bottom:4px">Technical Overview</h4><p style="font-size:11px;color:#999">Architecture, methodology, and approach — NDA required</p></div><div style="font-size:12px;font-weight:500;color:var(--purple);flex-shrink:0">Request →</div></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:22px 28px;background:#fff;border-bottom:1px solid rgba(0,0,0,0.07);gap:16px"><div style="min-width:0"><h4 style="font-size:14px;font-weight:500;color:#111;margin-bottom:4px">Infrastructure Brief</h4><p style="font-size:11px;color:#999">Deployment model and integration pathway — PDF</p></div><div style="font-size:12px;font-weight:500;color:var(--purple);flex-shrink:0">Request →</div></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:22px 28px;background:#fff;gap:16px"><div style="min-width:0"><h4 style="font-size:14px;font-weight:500;color:#111;margin-bottom:4px">Validation Summary</h4><p style="font-size:11px;color:#999">Internal results and methodology — gated access</p></div><div style="font-size:12px;font-weight:500;color:var(--purple);flex-shrink:0">Request →</div></div>
       </div>
     </div>
   </div>
