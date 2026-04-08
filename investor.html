@@ -25,6 +25,8 @@
   .site-footer-top{grid-template-columns:1fr 1fr !important}
   .site-footer-bottom{flex-direction:column;gap:20px}
   .cta-band{padding:72px 32px !important}
+  .inv-banner-inner{grid-template-columns:1fr !important;gap:24px}
+  .inv-brief-grid{grid-template-columns:1fr !important}
 }
 @media(max-width:390px){
   .int-layout{padding:0 20px !important}
@@ -48,13 +50,16 @@
   .site-footer-links{flex-direction:column;gap:10px}
   .cta-band{padding:56px 20px !important}
   .comp-table-wrap{margin:0 -20px;padding:0 20px}
+  .inv-banner-inner{grid-template-columns:1fr !important}
+  .inv-brief-grid{grid-template-columns:1fr !important}
+  .inv-form-grid{grid-template-columns:1fr !important}
 }
 </style></head>
 <body>
 <nav id="nav"><a class="nav-logo" href="index.html"><div class="logo-mark"><span></span><span></span><span></span><span></span></div><span class="logo-text">Implexus</span></a><ul class="nav-links"><li><a href="index.html">Overview</a></li><li><a href="technology.html">Technology</a></li><li><a href="usecases.html">Use Cases</a></li><li><a href="approach.html">Approach</a></li><li><a href="about.html">About</a></li></ul><div class="nav-right"><a class="nav-cta-ghost" href="contact.html">Contact</a><a class="nav-cta" href="investor.html">Investor Overview</a></div><button class="nav-hamburger" id="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></button></nav>
 <div class="nav-mobile" id="nav-mobile"><a href="index.html" onclick="closeNav()">Overview</a><a href="technology.html" onclick="closeNav()">Technology</a><a href="usecases.html" onclick="closeNav()">Use Cases</a><a href="approach.html" onclick="closeNav()">Approach</a><a href="about.html" onclick="closeNav()">About</a><a href="faq.html" onclick="closeNav()">FAQ</a><a href="careers.html" onclick="closeNav()">Careers</a><div class="nav-mobile-ctas"><a href="investor.html" class="btn-primary-dark" style="text-align:center;justify-content:center">Investor Overview</a><a href="contact.html" class="btn-ghost-dark" style="text-align:center;justify-content:center">Contact</a></div></div>
 <script>function toggleNav(){document.getElementById("nav-mobile").classList.toggle("open")}function closeNav(){document.getElementById("nav-mobile").classList.remove("open")}</script>
-<div class="int-banner"><div class="int-banner-grid"></div><div class="int-banner-orb"></div><div class="int-banner-inner" style="display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center"><div><div class="int-banner-badge">Investor Overview</div><div class="int-banner-title">A once-in-a-generation<br>infrastructure <em>opportunity.</em></div><p class="int-banner-sub">The world's data infrastructure is hitting structural limits. Implexus has spent 27 years building the answer. The commercialisation window is open.</p></div><div style="display:flex;flex-direction:column;gap:2px;flex-shrink:0">
+<div class="int-banner"><div class="int-banner-grid"></div><div class="int-banner-orb"></div><div class="int-banner-inner inv-banner-inner" style="display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center"><div><div class="int-banner-badge">Investor Overview</div><div class="int-banner-title">A once-in-a-generation<br>infrastructure <em>opportunity.</em></div><p class="int-banner-sub">The world's data infrastructure is hitting structural limits. Implexus has spent 27 years building the answer. The commercialisation window is open.</p></div><div style="display:flex;flex-direction:column;gap:2px;flex-shrink:0">
   <div style="background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:6px;padding:16px 20px;min-width:160px"><div style="font-family:var(--serif);font-size:28px;color:var(--purple-hi);line-height:1">27 yrs</div><div style="font-family:var(--mono);font-size:10px;color:var(--text-mid);margin-top:4px;line-height:1.4">Of proprietary R&amp;D</div></div>
   <div style="background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:6px;padding:16px 20px"><div style="font-family:var(--serif);font-size:28px;color:var(--purple-hi);line-height:1">50×</div><div style="font-family:var(--mono);font-size:10px;color:var(--text-mid);margin-top:4px;line-height:1.4">Max reduction, lab conditions</div></div>
   <div style="background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:6px;padding:16px 20px"><div style="font-family:var(--serif);font-size:28px;color:var(--purple-hi);line-height:1">$1T+</div><div style="font-family:var(--mono);font-size:10px;color:var(--text-mid);margin-top:4px;line-height:1.4">AI infrastructure spend 2024–27</div></div>
@@ -111,7 +116,7 @@
     <div class="int-section-label">Request investor materials</div>
     <h2 class="int-section-title">Ready to explore the opportunity?</h2>
     <p class="int-section-body">Request the full investor briefing package. All materials shared under NDA.</p>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:28px;align-items:start">
+    <div class="inv-brief-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:28px;align-items:start">
       <div>
         <p style="font-size:13px;font-weight:300;color:var(--ink-mid);line-height:1.7;margin-bottom:20px">The briefing package includes:</p>
         <div class="inv-checklist">
