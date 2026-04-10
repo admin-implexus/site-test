@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><base href="https://admin-implexus.github.io/site-test/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Switzer:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-<title>404 — Page Not Found · Implexus Data Technologies</title>
+<title>404 â Page Not Found Â· Implexus Data Technologies</title>
 <style>
-/* ── SHARED TOKENS ── */
+/* ââ SHARED TOKENS ââ */
 :root {
   --bg:#08080B; --bg-1:#0B0B10; --bg-2:#0E0E16; --bg-3:#12121A;
   --light:#F5F4F0; --cream:#EFEDE8; --white:#fff;
@@ -29,7 +29,7 @@ a{text-decoration:none;color:inherit}
 button{font-family:inherit;cursor:pointer;border:none;background:none}
 ul{list-style:none}
 
-/* ── NAV ── */
+/* ââ NAV ââ */
 #nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;background:rgba(8,8,11,0.88);backdrop-filter:blur(24px) saturate(1.6);border-bottom:1px solid var(--border)}
 .nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer}
 .logo-mark{width:28px;height:28px;display:grid;grid-template-columns:1fr 1fr;gap:3px}
@@ -53,13 +53,13 @@ ul{list-style:none}
 .nav-mobile a:hover{color:#fff}
 .nav-mobile-ctas{display:flex;flex-direction:column;gap:12px;width:100%;margin-top:32px}
 
-/* ── BUTTONS ── */
+/* ââ BUTTONS ââ */
 .btn-primary-dark{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;padding:13px 28px;border-radius:6px;background:var(--purple);color:#fff;transition:background 0.2s;cursor:pointer;border:none}
 .btn-primary-dark:hover{background:var(--purple-hi)}
 .btn-ghost-dark{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:400;padding:12px 26px;border-radius:6px;border:1px solid var(--border-hi);color:var(--text-mid);transition:all 0.2s;cursor:pointer;background:none}
 .btn-ghost-dark:hover{color:#fff;border-color:rgba(255,255,255,0.3)}
 
-/* ── 404 LAYOUT ── */
+/* ââ 404 LAYOUT ââ */
 .page-404 {
   min-height: 100vh;
   padding-top: var(--nav-h);
@@ -170,7 +170,7 @@ ul{list-style:none}
   background: var(--border-hi); flex-shrink: 0;
 }
 
-/* ── TABLET 810px ── */
+/* ââ TABLET 810px ââ */
 @media (max-width: 810px) {
   .nav-links,.nav-right { display: none; }
   .nav-hamburger        { display: flex; }
@@ -181,7 +181,7 @@ ul{list-style:none}
   .err-nav-hint { margin-top: 48px; padding-top: 32px; }
 }
 
-/* ── MOBILE 390px ── */
+/* ââ MOBILE 390px ââ */
 @media (max-width: 390px) {
   #nav          { padding: 12px 16px; }
   .err-content  { padding: 48px 20px; }
@@ -196,7 +196,7 @@ ul{list-style:none}
   .err-sep      { display: none; }
 }
 </style>
-</head>
+<style id="morphos-nav-patch">.nav-links { margin-left: auto !important; }</style></head>
 <body>
 
 <!-- NAV -->
