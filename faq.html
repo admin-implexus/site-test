@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><base href="https://admin-implexus.github.io/site-test/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Switzer:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="_shared.css"><title>FAQ — Implexus Data Technologies</title><style>
+<link rel="stylesheet" href="_shared.css"><title>FAQ â Implexus Data Technologies</title><style>
 @media(max-width:810px){
   .int-layout{grid-template-columns:1fr !important;padding:0 32px}
   .int-sidebar{position:static !important;height:auto !important;border-right:none;border-bottom:1px solid rgba(0,0,0,0.08);padding:32px 0}
@@ -55,12 +55,12 @@
 .faq-static-item:last-child{border-bottom:none}
 .faq-static-q{font-size:14px;font-weight:500;color:var(--ink);line-height:1.4;margin-bottom:12px}
 .faq-static-a{font-size:13px;font-weight:300;color:var(--ink-mid);line-height:1.75}
-</style></head>
+</style><style id="morphos-nav-patch">.nav-links { margin-left: auto !important; }</style></head>
 <body>
 <nav id="nav"><a class="nav-logo" href="index.html"><div class="logo-mark"><span></span><span></span><span></span><span></span></div><span class="logo-text">Implexus</span></a><ul class="nav-links"><li><a href="index.html">Overview</a></li><li><a href="technology.html">Technology</a></li><li><a href="usecases.html">Use Cases</a></li><li><a href="approach.html">Approach</a></li><li><a href="about.html">About</a></li></ul><div class="nav-right"><a class="nav-cta-ghost" href="contact.html">Contact</a><a class="nav-cta" href="investor.html">Investor Overview</a></div><button class="nav-hamburger" id="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></button></nav>
 <div class="nav-mobile" id="nav-mobile"><a href="index.html" onclick="closeNav()">Overview</a><a href="technology.html" onclick="closeNav()">Technology</a><a href="usecases.html" onclick="closeNav()">Use Cases</a><a href="approach.html" onclick="closeNav()">Approach</a><a href="about.html" onclick="closeNav()">About</a><a href="faq.html" onclick="closeNav()">FAQ</a><a href="careers.html" onclick="closeNav()">Careers</a><div class="nav-mobile-ctas"><a href="investor.html" class="btn-primary-dark" style="text-align:center;justify-content:center">Investor Overview</a><a href="contact.html" class="btn-ghost-dark" style="text-align:center;justify-content:center">Contact</a></div></div>
 <script>function toggleNav(){document.getElementById("nav-mobile").classList.toggle("open")}function closeNav(){document.getElementById("nav-mobile").classList.remove("open")}</script>
-<div class="int-banner" style="background:var(--bg-1)"><div class="int-banner-grid"></div><div class="int-banner-inner"><div class="int-banner-badge">Frequently asked questions</div><div class="int-banner-title">Questions we address <em>directly.</em></div><p class="int-banner-sub">The questions we receive most often — answered honestly, with scope conditions stated wherever they apply.</p></div></div>
+<div class="int-banner" style="background:var(--bg-1)"><div class="int-banner-grid"></div><div class="int-banner-inner"><div class="int-banner-badge">Frequently asked questions</div><div class="int-banner-title">Questions we address <em>directly.</em></div><p class="int-banner-sub">The questions we receive most often â answered honestly, with scope conditions stated wherever they apply.</p></div></div>
 <div class="int-outer" style="background:#fff"><div class="int-layout"><aside class="int-sidebar" style="background:#fff"><div class="sb-page-label">FAQ</div><div class="sb-page-title">Common Questions</div><ul class="sb-nav"><li><a class="sb-link active" href="#faq-tech"><span class="sb-diamond"></span>About the technology</a></li><li><a class="sb-link" href="#faq-programme"><span class="sb-diamond"></span>About the programme</a></li><li><a class="sb-link" href="#faq-engage"><span class="sb-diamond"></span>About engagement</a></li></ul><div class="sb-divider"></div><a href="contact.html" class="btn-primary-dark sb-cta">Send a Direct Enquiry</a><p class="sb-meta">Have a question not answered here? We respond directly.</p></aside><main class="int-content">
   <section class="int-section" id="faq-tech">
     <div class="int-section-label">About the technology</div>
@@ -68,7 +68,7 @@
     <div class="faq-static">
       <div class="faq-static-item">
         <div class="faq-static-q">Is Q2 just compression?</div>
-        <div class="faq-static-a">No. Compression works by finding patterns and redundancy in data and encoding them more efficiently. Q2 operates in a different mathematical framework entirely — restructuring data at a geometric and mathematical level, rather than searching for statistical patterns. The practical difference: Q2 can work on data types — like encrypted files — that compression cannot reduce at all.</div>
+        <div class="faq-static-a">No. Compression works by finding patterns and redundancy in data and encoding them more efficiently. Q2 operates in a different mathematical framework entirely â restructuring data at a geometric and mathematical level, rather than searching for statistical patterns. The practical difference: Q2 can work on data types â like encrypted files â that compression cannot reduce at all.</div>
       </div>
       <div class="faq-static-item">
         <div class="faq-static-q">Does this break mathematical limits?</div>
@@ -80,11 +80,11 @@
       </div>
       <div class="faq-static-item">
         <div class="faq-static-q">What data types does Q2 work best on?</div>
-        <div class="faq-static-a">Structured data with consistent internal form — database exports, schema-conformant logs, scientific time-series measurements, structured configuration files. These are the data categories showing the strongest results in current laboratory testing. Already-encrypted files and already-compressed media show minimal benefit. We document both.</div>
+        <div class="faq-static-a">Structured data with consistent internal form â database exports, schema-conformant logs, scientific time-series measurements, structured configuration files. These are the data categories showing the strongest results in current laboratory testing. Already-encrypted files and already-compressed media show minimal benefit. We document both.</div>
       </div>
       <div class="faq-static-item">
         <div class="faq-static-q">How do you verify that data is restored correctly?</div>
-        <div class="faq-static-a">A cryptographic fingerprint is taken of the original file. After reconstruction, the same fingerprint is taken of the output. If they match exactly, the transformation is confirmed correct. This test is run on every individual file in our test suite — not batched or averaged. A single failure is a test failure, full stop.</div>
+        <div class="faq-static-a">A cryptographic fingerprint is taken of the original file. After reconstruction, the same fingerprint is taken of the output. If they match exactly, the transformation is confirmed correct. This test is run on every individual file in our test suite â not batched or averaged. A single failure is a test failure, full stop.</div>
       </div>
     </div>
   </section>
@@ -98,7 +98,7 @@
       </div>
       <div class="faq-static-item">
         <div class="faq-static-q">Has anyone outside Implexus validated the results?</div>
-        <div class="faq-static-a">Not yet. All current results are from our own controlled laboratory testing. Controlled demonstrations have been conducted with government and institutional stakeholders. Independent third-party replication — where an external lab runs our documented tests on their own infrastructure without our involvement — is the next step.</div>
+        <div class="faq-static-a">Not yet. All current results are from our own controlled laboratory testing. Controlled demonstrations have been conducted with government and institutional stakeholders. Independent third-party replication â where an external lab runs our documented tests on their own infrastructure without our involvement â is the next step.</div>
       </div>
       <div class="faq-static-item">
         <div class="faq-static-q">How long has this been in development?</div>
@@ -116,7 +116,7 @@
     <div class="faq-static">
       <div class="faq-static-item">
         <div class="faq-static-q">Who is Q2 designed for?</div>
-        <div class="faq-static-a">Enterprise organisations and government institutions operating data-intensive infrastructure — data centres, secure networks, regulated systems, AI pipelines. Q2 is not a consumer product. It is not a general-purpose tool available for download. It is an infrastructure system evaluated through structured partner programmes.</div>
+        <div class="faq-static-a">Enterprise organisations and government institutions operating data-intensive infrastructure â data centres, secure networks, regulated systems, AI pipelines. Q2 is not a consumer product. It is not a general-purpose tool available for download. It is an infrastructure system evaluated through structured partner programmes.</div>
       </div>
       <div class="faq-static-item">
         <div class="faq-static-q">How does deployment work?</div>
@@ -135,6 +135,6 @@
   </section>
 </main></div></div>
 
-<footer class="site-footer"><div class="site-footer-inner"><div class="site-footer-top"><div><div class="site-footer-logo"><div class="logo-mark"><span></span><span></span><span></span><span></span></div><span class="logo-text">Implexus</span></div><p class="site-footer-tagline">In Everything &amp; Everywhere</p></div><div class="site-footer-col"><h5>Navigation</h5><a href="technology.html">Technology</a><a href="approach.html">Approach</a><a href="usecases.html">Use Cases</a><a href="about.html">About</a></div><div class="site-footer-col"><h5>Company</h5><a href="about.html">About Implexus</a><a href="investor.html">Investor Overview</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a></div><div class="site-footer-col"><h5>Resources</h5><a href="contact.html">Technical Overview</a><a href="faq.html">FAQ</a><a href="investor.html">Programme Status</a></div></div><div class="site-footer-bottom"><p class="site-footer-legal">© 2026 Implexus Data Technologies Inc. — Toronto, Canada. All performance claims are internal laboratory results subject to independent validation.</p><div class="site-footer-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div></div></footer>
+<footer class="site-footer"><div class="site-footer-inner"><div class="site-footer-top"><div><div class="site-footer-logo"><div class="logo-mark"><span></span><span></span><span></span><span></span></div><span class="logo-text">Implexus</span></div><p class="site-footer-tagline">In Everything &amp; Everywhere</p></div><div class="site-footer-col"><h5>Navigation</h5><a href="technology.html">Technology</a><a href="approach.html">Approach</a><a href="usecases.html">Use Cases</a><a href="about.html">About</a></div><div class="site-footer-col"><h5>Company</h5><a href="about.html">About Implexus</a><a href="investor.html">Investor Overview</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a></div><div class="site-footer-col"><h5>Resources</h5><a href="contact.html">Technical Overview</a><a href="faq.html">FAQ</a><a href="investor.html">Programme Status</a></div></div><div class="site-footer-bottom"><p class="site-footer-legal">Â© 2026 Implexus Data Technologies Inc. â Toronto, Canada. All performance claims are internal laboratory results subject to independent validation.</p><div class="site-footer-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div></div></footer>
 </body>
 </html>
