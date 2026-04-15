@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Switzer:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="_shared.css">
+<title>Journal — Implexus Data Technologies</title>
+<style>
+.jms-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(0,0,0,0.07);border-radius:8px;overflow:hidden;margin-bottom:48px}
+.jms-card{background:var(--white);padding:28px 24px;transition:background 0.15s}
+.jms-card:hover{background:var(--cream)}
+.jms-lbl{font-family:var(--mono);font-size:9px;font-weight:400;letter-spacing:0.14em;text-transform:uppercase;color:var(--purple);margin-bottom:8px}
+.jms-fig{font-family:var(--serif);font-size:40px;font-style:italic;color:var(--ink);line-height:1;margin-bottom:8px}
+.jms-desc{font-size:12px;color:var(--ink-mid);line-height:1.6}
+.jms-src{font-family:var(--mono);font-size:9px;color:var(--ink-dim);margin-top:8px}
+.journal-cats{display:flex;flex-wrap:wrap;gap:0;border:1px solid rgba(0,0,0,0.09);width:fit-content;margin-bottom:40px;border-radius:4px;overflow:hidden}
+.jcat{font-family:var(--mono);font-size:10px;font-weight:400;letter-spacing:0.1em;text-transform:uppercase;padding:8px 16px;cursor:pointer;color:var(--ink-mid);border-right:1px solid rgba(0,0,0,0.09);transition:all 0.15s}
+.jcat:last-child{border-right:none}
+.jcat:hover,.jcat.on{background:var(--ink);color:#fff}
+.journal-featured{display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(0,0,0,0.09);border-radius:8px;overflow:hidden;margin-bottom:32px}
+.journal-featured-img{background:linear-gradient(135deg,#1a0a2e,#0a0f2a,#1a1230);position:relative;min-height:280px;display:flex;align-items:flex-end;padding:28px}
+.journal-featured-img::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 40% 50%,rgba(108,63,162,0.4) 0%,transparent 65%)}
+.journal-featured-img .img-label{position:relative;font-family:var(--mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.2)}
+.journal-featured-content{background:var(--white);padding:44px;display:flex;flex-direction:column;justify-content:space-between}
+.journal-featured-tag{font-family:var(--mono);font-size:9px;letter-spacing:0.14em;text-transform:uppercase;color:var(--purple);margin-bottom:14px}
+.journal-featured-title{font-family:var(--serif);font-size:28px;font-style:italic;color:var(--ink);line-height:1.2;margin-bottom:14px}
+.journal-featured-sum{font-size:14px;color:var(--ink-mid);line-height:1.72;margin-bottom:20px}
+.journal-featured-meta{font-family:var(--mono);font-size:10px;color:var(--ink-dim)}
+.journal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(0,0,0,0.07);border:1px solid rgba(0,0,0,0.07);border-radius:8px;overflow:hidden;margin-bottom:56px}
+.journal-card{background:var(--white);overflow:hidden;transition:background 0.15s}
+.journal-card:hover{background:var(--cream)}
+.journal-card-img{height:160px;display:flex;align-items:center;justify-content:center;background:var(--cream-2);border-bottom:1px solid rgba(0,0,0,0.07)}
+.journal-card-img span{font-family:var(--mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;color:var(--ink-dim)}
+.journal-card-content{padding:22px}
+.journal-card-tag{font-family:var(--mono);font-size:9px;letter-spacing:0.12em;text-transform:uppercase;color:var(--purple);margin-bottom:8px}
+.journal-card-title{font-size:14px;font-weight:600;color:var(--ink);line-height:1.4;margin-bottom:8px}
+.journal-card-sum{font-size:12px;color:var(--ink-mid);line-height:1.6;margin-bottom:10px}
+.journal-card-meta{font-family:var(--mono);font-size:10px;color:var(--ink-dim)}
+.journal-newsletter{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:44px;display:flex;justify-content:space-between;align-items:center;gap:40px;margin-bottom:80px}
+.journal-newsletter-input{display:flex;gap:0;border:1px solid var(--border)}
+.journal-nl-field{padding:12px 16px;font-family:var(--mono);font-size:12px;color:var(--text-mid);min-width:220px;border-right:1px solid var(--border);background:transparent;outline:none}
+.journal-nl-field::placeholder{color:var(--text-dim)}
+/* Responsive */
+@media(max-width:810px){
+  .jms-strip{grid-template-columns:1fr 1fr}
+  .journal-featured{grid-template-columns:1fr}
+  .journal-grid{grid-template-columns:1fr 1fr}
+  .journal-newsletter{flex-direction:column;align-items:flex-start;gap:24px}
+  .journal-newsletter-input{flex-direction:column;width:100%}
+  .journal-nl-field{border-right:none;border-bottom:1px solid var(--border);min-width:unset;width:100%}
+  .site-footer-top{grid-template-columns:1fr 1fr !important}
+  .site-footer-bottom{flex-direction:column;gap:20px}
+}
+@media(max-width:390px){
+  .jms-strip{grid-template-columns:1fr}
+  .journal-featured{grid-template-columns:1fr}
+  .journal-grid{grid-template-columns:1fr}
+  .journal-cats{width:100%}
+  .jcat{flex:1;text-align:center}
+  .journal-newsletter{padding:28px 20px}
+  .site-footer-top{grid-template-columns:1fr !important}
+  .site-footer-links{flex-direction:column;gap:10px}
+}
+</style>
+</head>
+<body>
+<nav id="nav"><a class="nav-logo" href="index.html"><div class="logo-mark"><span></span><span></span><span></span><span></span></div><span class="logo-text">Implexus</span></a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="technology.html">Technology</a></li><li><a href="usecases.html">Use Cases</a></li><li><a href="approach.html">Approach</a></li><li><a href="about.html">About</a></li></ul><div class="nav-right"><a class="nav-cta-ghost" href="contact.html">Contact</a><a class="nav-cta" href="investor.html">Investor Overview</a></div><button class="nav-hamburger" id="hamburger" onclick="toggleNav()"><span></span><span></span><span></span></button></nav>
+<div class="nav-mobile" id="nav-mobile"><a href="index.html" onclick="closeNav()">Home</a><a href="technology.html" onclick="closeNav()">Technology</a><a href="usecases.html" onclick="closeNav()">Use Cases</a><a href="approach.html" onclick="closeNav()">Approach</a><a href="about.html" onclick="closeNav()">About</a><a href="journal.html" onclick="closeNav()">Journal</a>
+<a href="faq.html" onclick="closeNav()">FAQ</a><a href="careers.html" onclick="closeNav()">Careers</a><div class="nav-mobile-ctas"><a href="investor.html" class="btn-primary-dark" style="text-align:center;justify-content:center">Investor Overview</a><a href="contact.html" class="btn-ghost-dark" style="text-align:center;justify-content:center">Contact</a></div></div>
+<script>function toggleNav(){document.getElementById("nav-mobile").classList.toggle("open")}function closeNav(){document.getElementById("nav-mobile").classList.remove("open")}</script>
+
+<!-- Hero -->
+<div style="background:var(--bg);padding:calc(var(--nav-h) + 56px) 0 72px;border-bottom:1px solid var(--border);position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 80% at 30% 50%,rgba(108,63,162,0.12) 0%,transparent 70%);pointer-events:none"></div>
+  <div class="container" style="position:relative">
+    <div class="eyebrow">News &amp; Journal</div>
+    <h1 class="heading-xl" style="color:#fff;max-width:14ch;margin-bottom:24px">Market intelligence. Industry context.</h1>
+    <p class="body-copy" style="max-width:520px">The data infrastructure landscape is shifting fast. We track the forces shaping it — and share what we think matters for the organisations building on top of it.</p>
+  </div>
+</div>
+
+<!-- Main content -->
+<section class="section" style="background:var(--light);border-bottom:1px solid rgba(0,0,0,0.07)">
+  <div class="container">
+
+    <div class="eyebrow eyebrow-light">Market Signals</div>
+    <h2 class="heading-lg" style="color:#111;margin-bottom:36px">The numbers behind the urgency.</h2>
+
+    <div class="jms-strip">
+      <div class="jms-card"><div class="jms-lbl">Global data volume</div><div class="jms-fig">147 ZB</div><div class="jms-desc">Projected annual data creation by 2024, up from 2 ZB in 2010. Infrastructure was not designed for this scale.</div><div class="jms-src">IDC Global DataSphere</div></div>
+      <div class="jms-card"><div class="jms-lbl">Data centre power demand</div><div class="jms-fig">+40%</div><div class="jms-desc">Increase in global data centre electricity consumption projected through 2026, driven primarily by AI workloads.</div><div class="jms-src">IEA Energy Report 2024</div></div>
+      <div class="jms-card"><div class="jms-lbl">AI infrastructure spend</div><div class="jms-fig">$1T+</div><div class="jms-desc">Cumulative capital investment projected in AI infrastructure globally through 2027, with hyperscalers leading.</div><div class="jms-src">Goldman Sachs Research</div></div>
+      <div class="jms-card"><div class="jms-lbl">Encrypted data growth</div><div class="jms-fig">95%</div><div class="jms-desc">Share of enterprise data expected to be encrypted at rest by 2025 — making conventional compression irrelevant.</div><div class="jms-src">Gartner 2024</div></div>
+    </div>
+
+    <div class="journal-cats">
+      <span class="jcat on" onclick="filterJournal('all',this)">All</span>
+      <span class="jcat" onclick="filterJournal('infra',this)">Infrastructure</span>
+      <span class="jcat" onclick="filterJournal('ai',this)">AI &amp; Compute</span>
+      <span class="jcat" onclick="filterJournal('security',this)">Data Security</span>
+      <span class="jcat" onclick="filterJournal('policy',this)">Policy</span>
+      <span class="jcat" onclick="filterJournal('implexus',this)">Implexus</span>
+    </div>
+
+    <div class="journal-featured">
+      <div class="journal-featured-img"><div class="img-label">[ Feature — data centre aerial photography ]</div></div>
+      <div class="journal-featured-content">
+        <div>
+          <div class="journal-featured-tag">Infrastructure · Featured</div>
+          <div class="journal-featured-title">The Data Centre Capacity Crisis Is No Longer a Forecast. It's Now.</div>
+          <div class="journal-featured-sum">For the past five years, analysts have been warning that the world's data infrastructure was heading for a wall. The wall has arrived. Power queues in Northern Virginia stretch to 2027. Singapore has imposed moratoriums. The assumption that you can always build more is breaking down.</div>
+        </div>
+        <div>
+          <div class="journal-featured-meta">March 2026 · 6 min read · Infrastructure</div>
+          <div style="margin-top:12px"><a href="contact.html" class="btn-ghost-light" style="font-size:12px;padding:8px 18px">Read Full Brief →</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="journal-grid" id="journal-grid">
+      <div class="journal-card" data-cat="ai"><div class="journal-card-img"><span>[ AI training imagery ]</span></div><div class="journal-card-content"><div class="journal-card-tag">AI &amp; Compute</div><div class="journal-card-title">Why AI Training Costs Are Making CFOs Nervous</div><div class="journal-card-sum">The capital required to train frontier models has grown exponentially. The operational costs — storage, cooling, transmission — are becoming equally significant.</div><div class="journal-card-meta">February 2026 · 4 min read</div></div></div>
+      <div class="journal-card" data-cat="security"><div class="journal-card-img"><span>[ Encryption / security ]</span></div><div class="journal-card-content"><div class="journal-card-tag">Data Security</div><div class="journal-card-title">The Encryption Paradox: More Secure Data, Harder to Manage</div><div class="journal-card-sum">Enterprise-wide encryption mandates are creating a new problem: the tools organisations use to manage storage efficiency simply stop working once data is encrypted.</div><div class="journal-card-meta">February 2026 · 5 min read</div></div></div>
+      <div class="journal-card" data-cat="infra"><div class="journal-card-img"><span>[ Edge computing ]</span></div><div class="journal-card-content"><div class="journal-card-tag">Infrastructure</div><div class="journal-card-title">Edge AI Is Growing Faster Than Edge Infrastructure</div><div class="journal-card-sum">The demand for AI inference at the edge is outpacing the infrastructure available to support it. Bandwidth limits and storage constraints are the binding constraint.</div><div class="journal-card-meta">January 2026 · 4 min read</div></div></div>
+      <div class="journal-card" data-cat="policy"><div class="journal-card-img"><span>[ Government / policy ]</span></div><div class="journal-card-content"><div class="journal-card-tag">Policy &amp; Regulation</div><div class="journal-card-title">Sovereign Data Infrastructure: Governments Are Done Outsourcing</div><div class="journal-card-sum">Multiple G7 governments have announced domestic data infrastructure programmes. The policy direction is clear. The procurement implications are significant.</div><div class="journal-card-meta">January 2026 · 6 min read</div></div></div>
+      <div class="journal-card" data-cat="implexus" style="background:var(--bg)"><div class="journal-card-img" style="background:rgba(108,63,162,0.1);border-bottom-color:var(--border)"><span style="color:rgba(155,112,204,.6)">Implexus Update</span></div><div class="journal-card-content" style="background:var(--bg)"><div class="journal-card-tag" style="color:var(--purple-hi)">Implexus</div><div class="journal-card-title" style="color:#fff">Programme Status: Q1 2026</div><div class="journal-card-sum" style="color:rgba(255,255,255,.35)">Validation status, next milestones, and what we are preparing for the independent replication phase.</div><div class="journal-card-meta">March 2026 · 3 min read</div></div></div>
+      <div class="journal-card" data-cat="security"><div class="journal-card-img"><span>[ Quantum computing ]</span></div><div class="journal-card-content"><div class="journal-card-tag">Data Security</div><div class="journal-card-title">Post-Quantum Cryptography: The Clock Is Running</div><div class="journal-card-sum">NIST's finalisation of post-quantum encryption standards in 2024 marked the beginning of a long, expensive migration for organisations that encrypt large datasets.</div><div class="journal-card-meta">December 2025 · 5 min read</div></div></div>
+    </div>
+
+    <div class="journal-newsletter">
+      <div>
+        <div class="eyebrow eyebrow-light" style="margin-bottom:12px">Stay Informed</div>
+        <h3 class="heading-lg" style="color:#fff;font-size:24px">Market intelligence, delivered quarterly.</h3>
+        <p style="font-size:13px;color:rgba(255,255,255,0.35);line-height:1.65;max-width:400px;margin-top:8px">Infrastructure trends, Q2 programme updates, and analysis of the forces shaping enterprise data. For qualified subscribers.</p>
+      </div>
+      <div class="journal-newsletter-input" style="flex-shrink:0">
+        <input class="journal-nl-field" placeholder="your@email.com" />
+        <button class="btn-primary-dark" style="border-radius:0">Subscribe</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="cta-band">
+  <h2>Understand the technology behind the intelligence.</h2>
+  <p>The Q2 engine addresses the infrastructure challenges we track in this journal.</p>
+  <div class="cta-band-btns"><a href="technology.html" class="btn-primary-dark">Technology Overview</a><a href="contact.html" class="btn-ghost-dark">Discuss Engagement</a></div>
+</div>
+
+<footer class="site-footer"><div class="site-footer-inner"><div class="site-footer-top"><div><div class="site-footer-logo"><div class="logo-mark"><span></span><span></span><span></span><span></span></div><span class="logo-text">Implexus</span></div><p class="site-footer-tagline">In Everything &amp; Everywhere</p></div><div class="site-footer-col"><h5>Journal</h5><a>Infrastructure</a><a>AI &amp; Compute</a><a>Data Security</a><a>Policy</a></div><div class="site-footer-col"><h5>Technology</h5><a href="technology.html">Q2 Data Engine</a><a href="approach.html">Approach</a><a href="usecases.html">Use Cases</a></div><div class="site-footer-col"><h5>Engage</h5><a href="investor.html">Investor Overview</a><a href="contact.html">Contact</a><a href="faq.html">FAQ</a></div></div><div class="site-footer-bottom"><p class="site-footer-legal">© 2026 Implexus Data Technologies Inc. Journal content is provided for informational purposes only. Market data cited from publicly available external sources.</p><div class="site-footer-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div></div></footer>
+
+<script>
+function filterJournal(cat, el) {
+  document.querySelectorAll('.jcat').forEach(c => c.classList.remove('on'));
+  el.classList.add('on');
+  document.querySelectorAll('#journal-grid .journal-card').forEach(card => {
+    card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>
