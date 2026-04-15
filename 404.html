@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><base href="https://admin-implexus.github.io/site-test/">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Switzer:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-<title>404 â Page Not Found Â· Implexus Data Technologies</title>
+<title>404 — Page Not Found · Implexus Data Technologies</title>
 <style>
-/* ââ SHARED TOKENS ââ */
+/* ── SHARED TOKENS ── */
 :root {
   --bg:#08080B; --bg-1:#0B0B10; --bg-2:#0E0E16; --bg-3:#12121A;
   --light:#F5F4F0; --cream:#EFEDE8; --white:#fff;
@@ -29,7 +29,7 @@ a{text-decoration:none;color:inherit}
 button{font-family:inherit;cursor:pointer;border:none;background:none}
 ul{list-style:none}
 
-/* ââ NAV ââ */
+/* ── NAV ── */
 #nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;background:rgba(8,8,11,0.88);backdrop-filter:blur(24px) saturate(1.6);border-bottom:1px solid var(--border)}
 .nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer}
 .logo-mark{width:28px;height:28px;display:grid;grid-template-columns:1fr 1fr;gap:3px}
@@ -53,13 +53,13 @@ ul{list-style:none}
 .nav-mobile a:hover{color:#fff}
 .nav-mobile-ctas{display:flex;flex-direction:column;gap:12px;width:100%;margin-top:32px}
 
-/* ââ BUTTONS ââ */
+/* ── BUTTONS ── */
 .btn-primary-dark{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;padding:13px 28px;border-radius:6px;background:var(--purple);color:#fff;transition:background 0.2s;cursor:pointer;border:none}
 .btn-primary-dark:hover{background:var(--purple-hi)}
 .btn-ghost-dark{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:400;padding:12px 26px;border-radius:6px;border:1px solid var(--border-hi);color:var(--text-mid);transition:all 0.2s;cursor:pointer;background:none}
 .btn-ghost-dark:hover{color:#fff;border-color:rgba(255,255,255,0.3)}
 
-/* ââ 404 LAYOUT ââ */
+/* ── 404 LAYOUT ── */
 .page-404 {
   min-height: 100vh;
   padding-top: var(--nav-h);
@@ -170,7 +170,7 @@ ul{list-style:none}
   background: var(--border-hi); flex-shrink: 0;
 }
 
-/* ââ TABLET 810px ââ */
+/* ── TABLET 810px ── */
 @media (max-width: 810px) {
   .nav-links,.nav-right { display: none; }
   .nav-hamburger        { display: flex; }
@@ -181,7 +181,7 @@ ul{list-style:none}
   .err-nav-hint { margin-top: 48px; padding-top: 32px; }
 }
 
-/* ââ MOBILE 390px ââ */
+/* ── MOBILE 390px ── */
 @media (max-width: 390px) {
   #nav          { padding: 12px 16px; }
   .err-content  { padding: 48px 20px; }
@@ -196,7 +196,7 @@ ul{list-style:none}
   .err-sep      { display: none; }
 }
 </style>
-<style id="morphos-nav-patch">.nav-links { margin-left: auto !important; }</style></head>
+</head>
 <body>
 
 <!-- NAV -->
@@ -206,11 +206,14 @@ ul{list-style:none}
     <span class="logo-text">Implexus</span>
   </a>
   <ul class="nav-links">
-    <li><a href="index.html">Overview</a></li>
-    <li><a href="technology.html">Technology</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html">Home</a>
+        <span class="err-sep"></span>
+        <a href="technology.html">Technology</a></li>
     <li><a href="usecases.html">Use Cases</a></li>
     <li><a href="approach.html">Approach</a></li>
     <li><a href="about.html">About</a></li>
+    <li><a href="journal.html">Journal</a></li>
   </ul>
   <div class="nav-right">
     <a class="nav-cta-ghost" href="contact.html">Contact</a>
@@ -223,11 +226,12 @@ ul{list-style:none}
 
 <!-- MOBILE DRAWER -->
 <div class="nav-mobile" id="nav-mobile">
-  <a href="index.html"      onclick="closeNav()">Overview</a>
+  <a href="index.html"      onclick="closeNav()">Home</a>
   <a href="technology.html" onclick="closeNav()">Technology</a>
   <a href="usecases.html"   onclick="closeNav()">Use Cases</a>
   <a href="approach.html"   onclick="closeNav()">Approach</a>
   <a href="about.html"      onclick="closeNav()">About</a>
+  <a href="journal.html"    onclick="closeNav()">Journal</a>
   <a href="faq.html"        onclick="closeNav()">FAQ</a>
   <a href="careers.html"    onclick="closeNav()">Careers</a>
   <div class="nav-mobile-ctas">
@@ -265,6 +269,8 @@ ul{list-style:none}
     <div class="err-nav-hint">
       <span class="err-nav-label">Or go directly to</span>
       <div class="err-nav-links">
+        <a href="index.html">Home</a>
+        <span class="err-sep"></span>
         <a href="technology.html">Technology</a>
         <span class="err-sep"></span>
         <a href="usecases.html">Use Cases</a>
@@ -276,6 +282,8 @@ ul{list-style:none}
         <a href="investor.html">Investor Overview</a>
         <span class="err-sep"></span>
         <a href="faq.html">FAQ</a>
+        <span class="err-sep"></span>
+        <a href="journal.html">Journal</a>
       </div>
     </div>
 
