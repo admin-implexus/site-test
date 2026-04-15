@@ -46,22 +46,31 @@
 @media(max-width:810px){
   .jms-strip{grid-template-columns:1fr 1fr}
   .journal-featured{grid-template-columns:1fr}
+  .journal-featured-img{min-height:200px}
+  .journal-featured-content{padding:28px}
   .journal-grid{grid-template-columns:1fr 1fr}
-  .journal-newsletter{flex-direction:column;align-items:flex-start;gap:24px}
+  .journal-newsletter{flex-direction:column;align-items:flex-start;gap:24px;margin-bottom:40px}
   .journal-newsletter-input{flex-direction:column;width:100%}
   .journal-nl-field{border-right:none;border-bottom:1px solid var(--border);min-width:unset;width:100%}
+  .journal-cats{overflow-x:auto;-webkit-overflow-scrolling:touch;width:100%;flex-wrap:nowrap}
+  .jcat{flex-shrink:0}
   .site-footer-top{grid-template-columns:1fr 1fr !important}
   .site-footer-bottom{flex-direction:column;gap:20px}
 }
 @media(max-width:390px){
   .jms-strip{grid-template-columns:1fr}
   .journal-featured{grid-template-columns:1fr}
-  .journal-grid{grid-template-columns:1fr}
-  .journal-cats{width:100%}
-  .jcat{flex:1;text-align:center}
-  .journal-newsletter{padding:28px 20px}
+  .journal-featured-img{min-height:160px}
+  .journal-featured-content{padding:24px}
+  .journal-featured-title{font-size:22px}
+  .journal-grid{grid-template-columns:1fr !important}
+  .journal-card-img{height:120px}
+  .journal-newsletter{padding:24px 20px;margin-bottom:32px}
+  .journal-newsletter h3{font-size:20px !important}
+  .jms-fig{font-size:32px}
   .site-footer-top{grid-template-columns:1fr !important}
   .site-footer-links{flex-direction:column;gap:10px}
+  .section{padding:56px 20px !important}
 }
 </style>
 </head>
@@ -82,7 +91,7 @@
 </div>
 
 <!-- Main content -->
-<section class="section" style="background:var(--light);border-bottom:1px solid rgba(0,0,0,0.07)">
+<section class="section journal-main-section" style="background:var(--light);border-bottom:1px solid rgba(0,0,0,0.07)">
   <div class="container">
 
     <div class="eyebrow eyebrow-light">Market Signals</div>
