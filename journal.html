@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="_shared.css">
 <title>Journal — Implexus Data Technologies</title>
 <style>
-.jms-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(0,0,0,0.07);border-radius:8px;overflow:hidden;margin-bottom:48px}
+.jms-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(0,0,0,0.07);border-radius:8px;overflow:hidden;margin-bottom:48px;overflow:hidden}
 .jms-card{background:var(--white);padding:28px 24px;transition:background 0.15s}
 .jms-card:hover{background:var(--cream)}
 .jms-lbl{font-family:var(--mono);font-size:9px;font-weight:400;letter-spacing:0.14em;text-transform:uppercase;color:var(--purple);margin-bottom:8px}
@@ -44,7 +44,7 @@
 .journal-nl-field::placeholder{color:var(--text-dim)}
 /* Responsive */
 @media(max-width:810px){
-  .jms-strip{grid-template-columns:1fr 1fr}
+  .jms-strip{grid-template-columns:1fr 1fr !important}
   .journal-featured{grid-template-columns:1fr}
   .journal-featured-img{min-height:200px}
   .journal-featured-content{padding:28px}
@@ -58,7 +58,11 @@
   .site-footer-bottom{flex-direction:column;gap:20px}
 }
 @media(max-width:390px){
-  .jms-strip{grid-template-columns:1fr}
+  .site-footer-top{grid-template-columns:1fr !important}
+  .site-footer-links{flex-direction:column;gap:10px}
+}
+@media(max-width:390px){
+  .jms-strip{grid-template-columns:1fr !important}
   .journal-featured{grid-template-columns:1fr}
   .journal-featured-img{min-height:160px}
   .journal-featured-content{padding:24px}
@@ -158,7 +162,7 @@
   <div class="cta-band-btns"><a href="technology.html" class="btn-primary-dark">Technology Overview</a><a href="contact.html" class="btn-ghost-dark">Discuss Engagement</a></div>
 </div>
 
-<footer class="site-footer"><div class="site-footer-inner"><div class="site-footer-top"><div><div class="site-footer-logo"><div class="logo-mark"><span></span><span></span><span></span><span></span></div><span class="logo-text">Implexus</span></div><p class="site-footer-tagline">In Everything &amp; Everywhere</p></div><div class="site-footer-col"><h5>Journal</h5><a>Infrastructure</a><a>AI &amp; Compute</a><a>Data Security</a><a>Policy</a></div><div class="site-footer-col"><h5>Technology</h5><a href="technology.html">Q2 Data Engine</a><a href="approach.html">Approach</a><a href="usecases.html">Use Cases</a></div><div class="site-footer-col"><h5>Engage</h5><a href="investor.html">Investor Overview</a><a href="contact.html">Contact</a><a href="faq.html">FAQ</a></div></div><div class="site-footer-bottom"><p class="site-footer-legal">© 2026 Implexus Data Technologies Inc. Journal content is provided for informational purposes only. Market data cited from publicly available external sources.</p><div class="site-footer-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div></div></footer>
+<footer class="site-footer"><div class="site-footer-inner"><div class="site-footer-top"><div><div class="site-footer-logo"><div class="logo-mark"><span></span><span></span><span></span><span></span></div><span class="logo-text">Implexus</span></div><p class="site-footer-tagline">In Everything &amp; Everywhere</p></div><div class="site-footer-col"><h5>Navigation</h5><a href="technology.html">Technology</a><a href="approach.html">Approach</a><a href="usecases.html">Use Cases</a><a href="about.html">About</a></div><div class="site-footer-col"><h5>Company</h5><a href="about.html">About Implexus</a><a href="investor.html">Programme Status</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a></div><div class="site-footer-col"><h5>Resources</h5><a href="contact.html">Technical Overview</a><a href="contact.html">Corporate Overview</a><a href="faq.html">FAQ</a><a href="investor.html">Investor Overview</a></div></div><div class="site-footer-bottom"><p class="site-footer-legal">The information on this website is provided for general informational purposes only. Technology descriptions are illustrative and subject to ongoing research, development, and independent validation. Performance figures cited are internal laboratory results only and do not constitute guarantees of performance. Nothing on this site constitutes an offer of securities, professional advice, or a representation of validated commercial capability.<br>© 2026 Implexus Data Technologies Inc. — Toronto, Canada</p><div class="site-footer-links"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a></div></div></div></footer>
 
 <script>
 function filterJournal(cat, el) {
